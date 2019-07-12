@@ -8,7 +8,7 @@
 #### commit은 저장소의 Check point로 어떤 변경사항들이 저장되있는지를 기록하는거라함
 <br/>
 
-## git 사용법
+## 2 git 사용법
 ### 1 Repository에서 내 editor로 파일 가져오기
 - 1 ) `git clone https://github.com/whenilikeahorse/web.git <클론할 폴더 이름>`
 - 2 ) 클론한 폴더에서 editor키면 repo에 있는 자료들 가져와짐
