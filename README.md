@@ -6,12 +6,14 @@
 - 3 ) Repository : 저장소
 #### 여기서 1 -> 2 -> 3 순으로 파일이 이동하는데 1 -> 2 는 Add / 2 -> 3은 commit & push 한다고 함
 #### commit은 저장소의 Check point로 어떤 변경사항들이 저장되있는지를 기록하는거라함
+<br/>
 
-## 2 Repository에서 내 editor로 파일 가져오기
+## git 사용법
+### 1 Repository에서 내 editor로 파일 가져오기
 - 1 ) `git clone https://github.com/whenilikeahorse/web.git <클론할 폴더 이름>`
 - 2 ) 클론한 폴더에서 editor키면 repo에 있는 자료들 가져와짐
 
-## 3 명령어 순서 add -> commint -> push
+### 3 명령어 순서 add -> commint -> push
 - 1 ) `git init` : git 저장소 초기화 (프로젝트 초기에 한번)
 - 2 ) `git status` : 저장소 상태 체크, 현재 프로젝트 변경사항 확인
 - 3 ) `git add .` : 모든 파일을 staging area로 올리기
@@ -20,7 +22,7 @@
 - 5 ) `git remote add origin https://github.com/whenilikeahorse/web.git`
 - 6 ) `git push origin master`
 
-## 근데 여기서 에러뜰꺼임
+### 근데 여기서 에러뜰꺼임
 ![image](file:///C:/Users/%EA%B4%91%EC%9D%BC/Desktop/%EC%BA%A1%EC%B2%98.JPG)
 그 이유는 여기에 가서 확인 (규리쓰가 알려줌)https://lhy.kr/git-workflow<br/>
 
