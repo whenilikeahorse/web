@@ -13,7 +13,8 @@
 - 1 ) `git clone https://github.com/whenilikeahorse/web.git <클론할 폴더 이름>`
 - 2 ) 클론한 폴더에서 editor키면 repo에 있는 자료들 가져와짐
 
-### 3 명령어 순서 add -> commint -> push
+### 2 내 local에서 Repository로 옮기기 
+#### 명령어 순서
 - 1 ) `git init` : git 저장소 초기화 (프로젝트 초기에 한번)
 - 2 ) `git status` : 저장소 상태 체크, 현재 프로젝트 변경사항 확인
 - 3 ) `git add .` : 모든 파일을 staging area로 올리기
