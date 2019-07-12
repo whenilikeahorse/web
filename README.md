@@ -18,7 +18,7 @@
 - 2 ) `git status` : 저장소 상태 체크, 현재 프로젝트 변경사항 확인
 - 3 ) `git add .` : 모든 파일을 staging area로 올리기
 - 4 ) `git commit -m <설명>` : 어떤거를 commit했는지 설명에 간략하게 작성
-#### 추후에 변경사항이 있을 시에 4,5번 항목을 실행해준다
+#### 추후에 변경사항이 있을 시에 3,4번 항목(add & commit)을 실행해준다
 - 5 ) `git remote add origin https://github.com/whenilikeahorse/web.git`
 - 6 ) `git push origin master`
 
