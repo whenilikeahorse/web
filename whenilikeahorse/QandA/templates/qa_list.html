@@ -1,0 +1,9 @@
+
+<a href="{% url 'new_qa' %}">질문하러 가기</a>
+
+{% for qa in object_list %}
+
+<p>질문 제목 : {{qa.title}}</p>
+<p>내용 : {{qa.question}} <a href="{% url 'userqa_detail' qa.id %}">더보기</a></p>
+
+{% endfor %}
