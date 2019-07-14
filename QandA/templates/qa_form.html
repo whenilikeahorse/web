@@ -7,6 +7,9 @@
         </div>
     
         <div class = "main">
+            <div class="button1">
+                <a href="{% url 'qa_list' %}">돌아가기</a>
+            </div>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
