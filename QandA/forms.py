@@ -13,6 +13,6 @@ class UserqaForm(forms.ModelForm):
         }
         widgets = { # form의 특징과 속성 정의
             'title' : forms.TextInput ( attrs = {'class' : 'title'}),
-            'question' : forms.Textarea ( attrs = {'class' : 'question', 'cols': 40, 'rows': 20}),
+            'question' : forms.TextInput ( attrs = {'class' : 'question', 'cols': 60, 'rows': 10}),
         }
 

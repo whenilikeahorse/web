@@ -1,8 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class = "container2">
+    <div class = "nav">
+        navigation
+    </div>
+    <div class = "main">
+        <div class = "button1">
+            <a href="{% url 'qa_list' %}">돌아가기</a>
+        </div>
 
-<p>내용 : {{userqa.question}} </p>
+        <div class="user_question">
+        <p>Question : {{userqa.title}} </p>
+        </div>
 
+        <div class = "user_answer">
+        <p>내용 : {{userqa.question}} </p>
+        </div>
 
-<a href="{% url 'qa_list' %}">질문리스트 보러가기</a>
+        <div class="answer">
+        <p>Answer : ㅇㅇ</p>
+        </div>
+
+        <div class = "user_answer">
+            <p>답변 : </p>
+        </div>
+
+        <div class = "button1">
+            <a href="">수정</a>
+        </div>
+        <div class = "button1">
+            <a href="">삭제</a>
+        </div>
+ 
+    </div>
+</div>
 {% endblock %}

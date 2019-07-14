@@ -1,7 +1,49 @@
+.container2{
+    margin : 50px 0px;
+    height : 800px;
+    width : 100%;
+    display : grid;
+    position : relative;
+    grid-template-areas : "nav main";
+    grid-template-rows: 800px;
+    grid-template-columns: 2fr 8fr;
+}
+
+.title{
+    width : 500px;
+    height : 30px;
+}
+
+.nav{
+    color : black;
+    grid-area : nav;
+    background-color: rgb(87, 156, 216);
+    padding : 350px 50px;
+}
+
+.main{
+    grid-area: main;
+    padding : 20px 50px ;
+}
+
 .title{
     all : unset;
     border-radius : 4px;
     border : 1px solid black;
+}
+
+a:hover {
+    transform : scale(0.9);
+}
+
+a:link {
+    color : black;
+    text-decoration: none;
+}
+
+a:visited {
+    color : black;
+    text-decoration: none;
 }
 
 body{
@@ -13,6 +55,44 @@ body{
     all : unset;
     border-radius : 4px;
     border : 1px solid black;
+}
+
+.user_question{
+    margin : 10px 0px;
+    color : rgb(0, 0, 0);
+    height : 30px;
+    width : 600px;
+    border-radius : 8px;
+    background-color: rgba(54, 233, 114, 0.8);
+    box-shadow : 0 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.answer{
+    margin : 10px 0px;
+    color : rgb(0, 0, 0);
+    height : 30px;
+    width : 600px;
+    border-radius : 8px;
+    background-color: rgba(233, 54, 173, 0.8);
+    box-shadow : 0 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.user_question:active {
+    transform : scale(0.99);
+}
+
+p{
+    padding : 1px 0px 0px 10px;;
+}
+
+.user_answer{
+    margin : 10px 0px;
+    color : rgb(0, 0, 0);
+    width : 600px;
+    height : 200px;
+    background-color : white;
+    border-radius : 15px;
+    box-shadow : 2px 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 label{
@@ -36,6 +116,28 @@ button{
     font-weight : 800;
     font-size: 12px;
 }
+
+.button1{
+    font-family: 'Eoe_Zno_M';
+    cursor : pointer;
+    padding : 5px 0px;
+    width : 100px;
+    text-align : center;
+    border-radius : 5px;
+    border : 1px solid black;
+    color : rgba(0,0,0,0);
+    text-transform : uppercase;
+    font-weight : 800;
+    font-size: 15px;
+    display : inline-block;
+}
+
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    text-decoration: none; }
 
 button:active {
     transform : scale(0.9);
