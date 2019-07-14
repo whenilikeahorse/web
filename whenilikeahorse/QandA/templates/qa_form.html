@@ -1,4 +1,10 @@
 
+{% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}

@@ -1,9 +1,21 @@
 
-<a href="{% url 'new_qa' %}">질문하러 가기</a>
+{% load staticfiles %}
 
-{% for qa in object_list %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
 
-<p>질문 제목 : {{qa.title}}</p>
-<p>내용 : {{qa.question}} <a href="{% url 'userqa_detail' qa.id %}">더보기</a></p>
+<body>
+    <div class = "container">
+    <div class = "button1">
+    <a href="{% url 'qa_new' %}">질문하러 가기</a>
+    </div>
+    <p>user에게 작성된 질문 개수 : {{number}}</p>
 
-{% endfor %}
+    {% for qa in userqas %}
+    <p>질문 제목 : {{qa.title}}</p>
+    <p>작성일 : {{qa.pub_date}} 내용 : {{qa.question}} <a href="{% url 'qa_detail' qa.id %}">더보기</a></p>
+
+    {% endfor %}
+    </div>
+</body>

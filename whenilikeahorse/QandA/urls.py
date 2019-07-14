@@ -5,7 +5,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.UserqaList.as_view(), name="userqalist"),
-    path('new_qa/', views.new_qa, name = "new_qa" ),
-    path('qa_detail/<int:pk>', views.Qa_detail.as_view(), name = "userqa_detail" ),
+    path('', views.qa_list, name="qa_list"),
+    path('qa_new/', views.qa_new, name = "qa_new" ),
+    path('qa_detail/<int:qa_id>', views.qa_detail, name = "qa_detail" ),
+    path('qa_detail/<int:qa_id>/update', views.qa_update, name = "qa_update" ),
+    path('qa_detail/<int:qa_id>/delete', views.qa_detail, name = "qa_delete" ),
 ]

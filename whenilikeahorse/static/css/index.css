@@ -1,0 +1,52 @@
+.title{
+    all : unset;
+    border-radius : 4px;
+    border : 1px solid black;
+}
+
+body{
+    font-family: 'Eoe_Zno_M'; 
+    font-size : 20px;
+}
+
+.question{
+    all : unset;
+    border-radius : 4px;
+    border : 1px solid black;
+}
+
+label{
+    font-size: 20px;
+    font-family: 'Eoe_Zno_M'; 
+}
+
+
+button{
+    all : unset;    /* 재정의 */
+    cursor : pointer;
+    background-color: white;
+    padding : 5px 0px;
+    width : 80px;
+    text-align : center;
+    border-radius : 5px;
+    box-shadow : 0 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border : 2px solid rgba(0,0,0,0.5);
+    color : rgba(0,0,0,0.7);
+    text-transform : uppercase;
+    font-weight : 800;
+    font-size: 12px;
+}
+
+button:active {
+    transform : scale(0.9);
+}
+
+@font-face { 
+    font-family: 'Eoe_Zno_M'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_M.woff') 
+    format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face { font-family: 'Eoe_Zno_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_B.woff') format('woff'); font-weight: normal; font-style: normal; }

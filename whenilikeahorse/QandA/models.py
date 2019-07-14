@@ -6,9 +6,15 @@ from django import forms
 # 		raise forms.ValidationError('3글자 이상 입력해주세요')
 
 class Userqa(models.Model):
-    username = models.CharField(max_length=100)
-    title = models.CharField(max_length=100, verbose_name = "질문 제목", null = True)
-    question = models.CharField(max_length=100, verbose_name = "내용")
+    username = models.CharField(max_length=100, null = True)
+    title = models.CharField(max_length=100, null = True)
+    question = models.CharField(max_length=100, null = True)
+    pub_date = models.DateField('date published', null = True)
+    objects = models.Manager() 
+
 
     def __str__(self):
         return self.title
+
+    # def summary(self):
+    #     return self.question[:20]

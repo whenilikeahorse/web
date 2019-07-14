@@ -7,4 +7,12 @@ class UserqaForm(forms.ModelForm):
     class Meta:
         model = Userqa
         fields = ('title', 'question')
+        labels = {  # input의 label 정의
+            'title' : '질문 제목' ,
+            'question' : '내용',
+        }
+        widgets = { # form의 특징과 속성 정의
+            'title' : forms.TextInput ( attrs = {'class' : 'title'}),
+            'question' : forms.Textarea ( attrs = {'class' : 'question', 'cols': 40, 'rows': 20}),
+        }
 
