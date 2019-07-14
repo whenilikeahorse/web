@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'QandA',
+    'mypagemain',
 ]
 
 MIDDLEWARE = [
@@ -121,8 +122,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static'),
-]
-    
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR,'static'),
+# ]
+
+#  스태틱 파일들이 존재하는 폴더 위치를 알려준다.
+STATICFILES_DIRS = (os.path.join('static'),)    
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')

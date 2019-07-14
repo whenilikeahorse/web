@@ -14,7 +14,7 @@
 ### 1 Repository에서 내 editor로 파일 가져오기
 - 1 ) `git clone https://github.com/whenilikeahorse/web.git <클론할 폴더 이름>`
 - 2 ) 클론한 폴더에서 editor키면 repo에 있는 자료들 가져와짐
-- 3 ) 누군가 origin master branch를 업데이트 한 경우 `git pull` 명령어로 local 데이터 업데이트 할 수 있음 <push 하기 전에 꼭!! 해주어야함>
+- 3 ) 누군가 origin master branch를 업데이트 한 경우 `git pull origin master` 명령어로 local 데이터 업데이트 할 수 있음 <push 하기 전에 꼭!! 해주어야함>
 ### 2 내 local에서 Repository로 옮기기 
 #### 명령어 순서
 - 1 ) `git init` : git 저장소 초기화 (프로젝트 초기에 한번)
