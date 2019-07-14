@@ -6,13 +6,15 @@
 - 3 ) Repository : 저장소
 #### 여기서 1 -> 2 -> 3 순으로 파일이 이동하는데 1 -> 2 는 Add / 2 -> 3은 commit & push 한다고 함
 #### commit은 저장소의 Check point로 어떤 변경사항들이 저장되있는지를 기록하는거라함
+#### commit 예제 : "[Mainpage css fix] 메인페이지 interface 수정" 
+#### -> [이번 커밋의 간단한 내역] 이번 커밋의 자세한 내역 
 <br/>
 
 ## 2 git 사용법
 ### 1 Repository에서 내 editor로 파일 가져오기
 - 1 ) `git clone https://github.com/whenilikeahorse/web.git <클론할 폴더 이름>`
 - 2 ) 클론한 폴더에서 editor키면 repo에 있는 자료들 가져와짐
-
+- 3 ) 누군가 origin master branch를 업데이트 한 경우 `git pull` 명령어로 local 데이터 업데이트 할 수 있음 <push 하기 전에 꼭!! 해주어야함>
 ### 2 내 local에서 Repository로 옮기기 
 #### 명령어 순서
 - 1 ) `git init` : git 저장소 초기화 (프로젝트 초기에 한번)
