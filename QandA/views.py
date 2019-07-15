@@ -29,7 +29,7 @@ def qa_new(request):
         return render(request, 'qa_form.html', {'form': form } ) # form을 사용할 곳인 templates에 form 전달
 
 def qa_detail(request, qa_id):
-    qa_detail = get_object_or_404(Userqa, pk=qa_id)
+    qa_detail = get_object_or_404(Userqa, pk=qa_id) # 특정 개체 가져오기
     userqa = Userqa.objects.get(pk=qa_id)
 
     return render(request, 'qa_detail.html' ,{
@@ -39,17 +39,20 @@ def qa_detail(request, qa_id):
 
 # qa 수정 및 삭제
 def qa_update(request, qa_id):
+    userqa = get_object_or_404(Userqa, pk = qa_id)
 
     if request.method == "POST":
-        form = UserqaForm(request.POST) # 덮어쓰기 어떻게하냐?
+        form = UserqaForm(request.POST, instance = userqa)  # request된 것을 instance에 update를 이런식으로 해준다고 함 
 
         if form.is_valid():
-            qa_update = form.save(commit=False)
-            qa_update.username = request.user
-            qa_update.save()
-            return redirect('qa_list')
+            form.save()
+            return render(request, 'qa_detail.html', {'userqa' : userqa}) # 그리고 이제 update된 instance를 보내줘서 보여주면 되는거
     else:
-        qa = Userqa.objects.get(pk = qa_id)
-        form = UserqaForm(instance = qa)
+        form = UserqaForm(instance = userqa)
     
     return render(request, 'qa_form.html', {'form': form } ) # 값이 채워진 form 을 보여줄 것
+
+def qa_delete(request, qa_id):
+    qa = get_object_or_404(Userqa, pk = qa_id)
+    qa.delete()
+    return redirect('qa_list')
