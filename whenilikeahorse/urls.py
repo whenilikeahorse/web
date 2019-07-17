@@ -20,4 +20,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('userQ&A/', include('QandA.urls')),
+<<<<<<< HEAD
+=======
+# <<<<<<< HEAD
+    path('mypage/',include('mypagemain.urls')),
+# =======
+# >>>>>>> [Configure rebuild & bootstrap add] 구조 변경 및 부트스트랩 적용
+>>>>>>> b0e73ad213edb707d433e0d6a1b261b27bbe2c16
 ]
