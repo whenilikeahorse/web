@@ -7,7 +7,7 @@ def signup(request):
         if request.POST['password1'] == request.POST['password2']:
             user = User.objects.create_user(username=request.POST['username'], password=request.POST['password1'])
             auth.login(request, user) # 회원가입하고 자동적으로 로그인 시켜줌
-            return redirect('main') 
+            return redirect('login') 
     return render(request, 'signup.html')
 
 def login(request):
