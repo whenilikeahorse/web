@@ -34,7 +34,7 @@
 `git rebase origin/master`<br/>
 하고 다시 push하면 될거임 // commit 상태 확인하고 싶으면 `git log`
 
-###branch
+### branch
 - 1 )  `git branch ` : branch 확인할 수 있음
 - 2 )  `git branch <branchname> ` : branchname 의 branch 생성
 - 3 )  `git checkout <branch> ` : 사용할 branch 지정
