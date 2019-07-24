@@ -40,7 +40,7 @@
   font-family: 'Eoe_Zno_M'; 
   grid-area: main2;
   padding : 20px 50px ;
-  border-bottom-style : solid;
+  border-bottom :1px solid #bbb;
 }
 
 .main3{
