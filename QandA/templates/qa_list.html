@@ -12,7 +12,6 @@
         <a href="{% url 'qa_new' %}">질문하러 가기</a>
         </div>
         <p>user에게 작성된 질문 개수 : {{number}}</p>
-
         {% for qa in userqas %}
         <div class="user_question">
         <a href="{% url 'qa_detail' qa.id %}"><p>Q {{qa.title}} </p></a>

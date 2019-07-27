@@ -24,10 +24,11 @@
         <div class = "user_answer">
             <p>답변 : </p>
         </div>
-
+        {% for qa in userqas %}
         <div class = "button1">
             <a href="{% url 'qa_update' qa.id%}"> 수정</a>
         </div>
+        {% endfor %}
         <div class = "button1">
             <a href="">삭제</a>
         </div>
