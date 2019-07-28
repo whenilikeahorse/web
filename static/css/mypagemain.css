@@ -14,7 +14,7 @@
 
 .profile{
   font-family: 'Eoe_Zno_M'; 
-  color : black;
+  color : white;
   grid-area : profile;
   
 }
@@ -72,9 +72,58 @@
   position:relative;
   color : rgb(255,255,255);
 }
+
+.profile1{
+  font-family: 'BBTreeGR'; 
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 45px;
+  max-width: 200px;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  letter-spacing: 0;
+  -webkit-transition: all .28s ease-in-out;
+  transition: all .28s ease-in-out;
+  margin-top: 10px;
+}
+
+.profile1:hover,
+.profile1:focus,
+.profile1:active {
+  letter-spacing: 5px;
+}
+.profile1:after,
+.profile1:before {
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all .28s ease-in-out;
+  transition: all .28s ease-in-out;
+  width: 0;
+}
+.profile1:hover:after,
+.profile1:hover:before {
+  border-color: #fff;
+  -webkit-transition: width 350ms ease-in-out;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+.profile1:hover:before {
+  bottom: auto;
+  top: 0;
+}
+
+
 /* ---------------------navbutton------------------------ */
 .nav1{
-  font-family: 'yg-jalnan'; 
+  font-family: 'BBTreeGR'; 
   position: relative;
   display: inline-block;
   width: 100%;
@@ -184,6 +233,12 @@ box-shadow : 2px 0px 7px rgb(195,195,196);
   font-weight: normal; 
   font-style: normal; }
 
+  @font-face { 
+    font-family: 'BBTreeGR'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+  }
 
 
 
