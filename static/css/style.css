@@ -10,16 +10,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-<<<<<<< HEAD
-  text-decoration: none; }
-  a:hover {
-    text-decoration: none; }
-=======
   text-decoration: none;
  }
 a:hover {
   text-decoration: none; }
->>>>>>> b0e73ad213edb707d433e0d6a1b261b27bbe2c16
 
 h1, h2, h3, h4, h5 {
   color: #000;
