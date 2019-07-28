@@ -1,21 +1,37 @@
+
 {% extends 'base.html' %}
-{% block contents %}
-<h1>Sign Up!</h1>
-<form method = "POST" action="{%url 'signup' %}">
-    {% csrf_token %} 
-    Username:
-    <br>
-    <input name="username" type="text" value="">
-    <br>
-    Password:
-    <br>
-    <input name="password1" type="password" value="">
-    <br>
-    Confirm Password:
-    <br>
-    <input name="password2" type="password" value="">
-    <br>
-    <br>
-    <input class="btn btn-primary" type="submit" value="Sign Up!">
-</form>
+{% block content %}
+
+    <div class="my-5 mx-auto card" style="text-align: center;">
+
+        <div class='card-header'>
+            {% if error %}
+            {{ error }}
+            {% endif %}
+
+            <h1>Sign Up!</h1>
+        </div>
+
+        <div class='card-body'>
+            <div class="mx-auto card-content">
+                <form method="POST" action="{% url 'signup'%}">
+                    {% csrf_token %}    
+
+                    Username: <input name="username" type="text" value="">
+                    <br>
+                    <br>
+                    Password: <input name="password1" type="password" value="">
+                    <br>
+                    <br>
+                    Confirm Password: <input name="password2" type="password" value="">
+                    <br>
+                    <br>
+                    <input class="btn btn-primary" type="submit" value="Sign Up!">
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+    
+
+

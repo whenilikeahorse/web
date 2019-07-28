@@ -26,15 +26,25 @@
         </button>
         <div class="collapse navbar-collapse jejumyeongjo" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{%url 'main'%}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{%url 'qa_list'%}">QnA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{%url 'mypagemain'%}">Mypage</a>
-                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'user_page'%}">My Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="logout" method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <input type="hidden" />
+                        </form>
+                        <a class = "nav-link" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'signin'%}">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </nav>

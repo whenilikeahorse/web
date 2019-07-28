@@ -1,27 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div class="my-5 mx-auto card" style="text-align: center;">
-      <div class='card-header'>
-        <h1>main</h1>
-      </div>
-      <div class='card-body'>
-        <p>메인페이지</p>
-      <div class="mx-auto card-content">
-        <form method = "POST" action="{% url 'login' %}">
-          {% csrf_token %}
-          ID
-          <br>
-          <input name="username" type="text" value="">
-          <br>
-          Password
-          <br>
-          <input name="password" type="password" value="">
-          <br>
-          <br>
-          <input class="btn btn-primary" type="submit" value="로그인">
-      </form>
-        <a href="{%url 'signup' %}">회원가입</a>
-      </div>
-    </div>
+
+<div class = "introduce1">
+    <h4>나만의 포트폴리오를 작성하고 다른사람들과 공유해보세요</h4>
+    <p>페이지 소개 부분</p>
+</div>
+
+<div class = "introduce2">
+  <h3>다른 User들 page 구경가기 <a href = "{% url 'search_page' %}"> > 검색하러 가기 </a></h3>
+
+  {% for user in users %}
+  <div class="user_question2">
+    <a href = "{% url 'other_page' user.id %}"><p>{{user.username}}/ pw : 123123</p></a>
   </div>
+  {% endfor %}
+</div>
+
+<div class = "introduce3">
+
+</div>
+
 {% endblock %}
