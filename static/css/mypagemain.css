@@ -1,0 +1,271 @@
+.container2{
+  margin : 50px 0px;
+  height : 800px;
+  width : 100%;
+  display : grid;
+  /* position : relative; */
+  grid-template-areas : 
+  "profile main1"
+  "nav main2"
+  "nav main3";
+  grid-template-rows: 250px 250px 250px;
+  grid-template-columns: 200px 800px;
+}
+
+.profile{
+  font-family: 'Eoe_Zno_M'; 
+  color : black;
+  grid-area : profile;
+  
+}
+
+.profilecontent{
+  height: 170px;
+  background-color : rgb(191, 225, 231);
+  box-shadow : 2px 0px 7px rgb(195,195,196);
+  position:relative;
+  /* border-top-left-radius: 5%;
+  border-top-right-radius: 5%; */
+}
+
+
+.profileimg{
+  position:absolute;
+  height: 150px;
+  width: 150px;
+  background-color: rgb(255,255,255);
+  /* margin : auto; */
+  border-radius : 50%;
+  border-style : solid;
+  border-width : 1px;
+  border-color : rgb(195, 196, 197);
+  margin-left : 25px;
+  margin-top : 10px;
+  
+}
+
+.profiletext{
+  height: 75px;
+  background-color : rgb(151, 161, 163);
+  box-shadow : 3px 2px 7px rgb(195, 195, 196);
+  position: relative;
+  text-align: center;
+}
+
+
+
+.nav{
+  grid-area : nav;
+  background-color: rgb(255,255,255);
+  padding: 0px;
+  color: white;
+  text-align: center;
+}
+
+.navigation{
+  margin-top : 10px;
+  padding : 30px;
+  height: 490px;
+  width: 100%;
+  background-color : rgb(191, 225, 231);
+  box-shadow : 2px 0px 7px rgb(195,195,196);
+  position:relative;
+  color : rgb(255,255,255);
+}
+/* ---------------------navbutton------------------------ */
+.nav1{
+  font-family: 'yg-jalnan'; 
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 45px;
+  max-width: 200px;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  letter-spacing: 0;
+  -webkit-transition: all .28s ease-in-out;
+  transition: all .28s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.nav1:hover,
+.nav1:focus,
+.nav1:active {
+  letter-spacing: 5px;
+}
+.nav1:after,
+.nav1:before {
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all .28s ease-in-out;
+  transition: all .28s ease-in-out;
+  width: 0;
+}
+.nav1:hover:after,
+.nav1:hover:before {
+  border-color: #fff;
+  -webkit-transition: width 350ms ease-in-out;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+.nav1:hover:before {
+  bottom: auto;
+  top: 0;
+}
+
+/* ----------------------------contents---------------- */
+.main1{
+  font-family: 'Eoe_Zno_M'; 
+  grid-area: main1;
+  padding : 20px 50px ;
+  margin : 0px 10px 10px 10px;
+  box-shadow : 2px 0px 7px rgb(195,195,196);
+}
+
+.main2{
+  font-family: 'Eoe_Zno_M'; 
+  grid-area: main2;
+  padding : 20px 50px ;
+  margin : 0px 10px 10px 10px;
+box-shadow : 2px 0px 7px rgb(195,195,196);
+}
+
+.main3{
+  font-family: 'Eoe_Zno_M'; 
+  grid-area: main3;
+  padding : 20px 50px ;
+  margin : 0px 10px 10px 10px;
+  box-shadow : 2px 0px 7px rgb(195,195,196);
+}
+
+/* -------------------여기까지 그리드------- */
+
+
+.profileButton {
+  font-family: 'Eoe_Zno_M'; 
+  position : absolute;
+  left : 50px;
+  top : 60px;
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.profileButton:hover {
+	background-color:#eb675e;
+}
+.profileButton:active {
+	position:absolute;
+	top:60px;
+}
+
+        
+@font-face { 
+  font-family: 'yg-jalnan'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .body{
+  padding-right: 5rem;
+  padding-left : 5rem;
+}
+
+.wrapper { 
+  display: grid; 
+  grid-template-columns: 200px, 700px;
+  grid-template-rows: 200px; 
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+} 
+
+.box1 { 
+  grid-column-start: 1; 
+  grid-column-end: 2; 
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+}
+
+.box2 { 
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2; 
+  grid-row-end: 7; 
+}
+
+.box3 { 
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 1; 
+  grid-row-end: 3; 
+}
+
+.box4 { 
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 3; 
+  grid-row-end: 5; 
+}
+
+.box5 { 
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 5; 
+  grid-row-end: 7; 
+}
+
+
+
+* {box-sizing: border-box;}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+.nested {
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
+} */

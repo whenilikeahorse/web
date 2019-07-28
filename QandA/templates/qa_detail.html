@@ -4,5 +4,26 @@
 <p>내용 : {{userqa.question}} </p>
 
 
+<<<<<<< HEAD
 <a href="{% url 'qa_list' %}">질문리스트 보러가기</a>
+=======
+        <div class="answer">
+        <p>Answer : ㅇㅇ</p>
+        </div>
+
+        <div class = "user_answer">
+            <p>답변 : </p>
+        </div>
+        {% for qa in userqas %}
+        <div class = "button1">
+            <a href="{% url 'qa_update' qa.id%}"> 수정</a>
+        </div>
+        {% endfor %}
+        <div class = "button1">
+            <a href="">삭제</a>
+        </div>
+ 
+    </div>
+</div>
+>>>>>>> 0dabc1d921bebcf613f4a703f7b02c7866efe729
 {% endblock %}

@@ -7,9 +7,21 @@
       <div class='card-body'>
         <p>메인페이지</p>
       <div class="mx-auto card-content">
-       
+        <form method = "POST" action="{% url 'login' %}">
+          {% csrf_token %}
+          ID
+          <br>
+          <input name="username" type="text" value="">
+          <br>
+          Password
+          <br>
+          <input name="password" type="password" value="">
+          <br>
+          <br>
+          <input class="btn btn-primary" type="submit" value="로그인">
+      </form>
+        <a href="{%url 'signup' %}">회원가입</a>
       </div>
     </div>
   </div>
 {% endblock %}
-    
