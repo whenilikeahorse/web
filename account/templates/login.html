@@ -11,7 +11,7 @@
 
         <div class='card-body'>
             <div class="mx-auto card-content">
-                <form method="POST" action="{% url 'user_page' %}">
+                <form method="POST" action="{% url 'login' %}">
                     {% csrf_token %}
                     Username:<input name="username" type="text" value="">
                     <br>

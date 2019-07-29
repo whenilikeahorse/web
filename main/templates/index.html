@@ -8,12 +8,17 @@
 
 <div class = "introduce2">
   <h3>다른 User들 page 구경가기 <a href = "{% url 'search_page' %}"> > 검색하러 가기 </a></h3>
-
-  {% for user in users %}
-  <div class="user_question2">
-    <a href = "{% url 'other_page' user.id %}"><p>{{user.username}}/ pw : 123123</p></a>
+  <div class = "box1">
+    {% for user in users %}
+      <div class="user_question2">
+        <a href = "{% url 'other_page' user.id %}">
+          <div class="user_question2">
+            {{user.username}}/ pw : 123123
+          </div>
+        </a>
+      </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
 <div class = "introduce3">

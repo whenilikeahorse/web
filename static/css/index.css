@@ -84,16 +84,16 @@ body{
 }
 
 .user_question{
-    margin : 10px 0px;
     color : rgb(0, 0, 0);
-    height : 30px;
-    width : 600px;
-    border-radius : 8px;
-    background-color: rgba(54, 233, 114, 0.8);
+    height : 40px;
+    width : 700px;
+    border : solid 3px rgba(54, 233, 114, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow : 0 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .user_question2{
+    position : relative;
     margin : 10px 0px;
     color : rgb(0, 0, 0);
     height : 30px;
@@ -103,13 +103,24 @@ body{
     box-shadow : 0 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.answer{
+.user_question3{
+    position : relative;
     margin : 10px 0px;
     color : rgb(0, 0, 0);
     height : 30px;
-    width : 600px;
-    border-radius : 8px;
-    background-color: rgba(233, 54, 173, 0.8);
+    width : 500px;
+    border-radius : 7px;
+    background-color: rgba(54, 233, 114, 0.8);
+    box-shadow : 0 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.answer{
+    margin : 10px 0px;
+    color : rgb(0, 0, 0);
+    height : 40px;
+    width : 700px;
+    border : solid 3px rgba(233, 54, 173, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow : 0 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -121,13 +132,19 @@ p{
     padding : 1px 0px 0px 10px;;
 }
 
+.box1{
+    position : relative;
+    display : inline-block;
+    width : 800px;
+    margin : 20px;
+}
+
 .user_answer{
     margin : 10px 0px;
     color : rgb(0, 0, 0);
-    width : 600px;
-    height : 100px;
-    background-color : white;
-    border-radius : 15px;
+    width : 700px;
+    height : 150px;
+    background-color : rgb(240, 240, 240);
     box-shadow : 2px 4px 6px rgba(50,50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 

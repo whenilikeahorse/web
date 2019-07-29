@@ -8,7 +8,9 @@
     <div class="profilecontent">
       <div class="profileimg"></div>
     </div>
+    
     <div class="profiletext">
+        ID : {{owner_name}}
         <a href="" class="nav1">프로필 보기</a>
     </div> 
     <!-- <a href="#" class="profileButton">프로필 수정</a>     -->
@@ -16,7 +18,7 @@
 
   <div class="nav">
     <div class="navigation">
-      <a href="" class="nav1">nav1</a>
+      <a href= "" class="nav1">Other Page</a>
       <a href="" class="nav1">nav2</a>
       <a href= "{% url 'qa_list' %}" class="nav1">Q&A</a>
       <a href="" class="nav1">nav4</a>
@@ -26,10 +28,15 @@
     <h4>{{owner_name}}님의 Page 입니다 !</h4>
   </div>
   <div class="main2">
+    {% if user.is_authenticated %}
+      <div class = "button1">
+        <a href="{% url 'qa_new' %}">질문하러 가기</a>
+      </div>
+    {% endif %}
     <p>'{{owner_name}}' 님에게 작성된 질문 개수 : {{n2}}</p> 
         
     {% for qa in userqas2 %}
-    <div class="user_question">
+    <div class="user_question3">
         <a href="{% url 'qa_detail' qa.id %}"><p>{{qa.title}}</p></a>
     </div>
     {% endfor %}

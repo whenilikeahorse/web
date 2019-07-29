@@ -36,12 +36,18 @@
     </div>
 
     <div class = "main2">
+        {% if access_user == reader_user %} <!--로그인 한 사람과 질문 받는사람이 같다면-->
+           페이지 주인만 답변 가능
+            <div class = "button1">
+                <a href="">답변하기</a>
+            </div>
+        {% endif %}
         <div class="answer">
-            <p>Answer : ㅇㅇ</p>
+            <p>Answer : {{userqa.a_title}}</p>
         </div>
             
         <div class = "user_answer">
-            <p>답변 : </p>
+            <p>내용 : {{userqa.answer}}</p>
         </div>
     </div>
 

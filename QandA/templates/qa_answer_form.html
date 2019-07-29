@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<link rel = "stylesheet" href="{% static 'css/mypagemain.css' %}">
+
+<div class="container2">
+
+  <div class="profile">
+    <div class="profilecontent">
+      <div class="profileimg"></div>
+    </div>
+    <div class="profiletext">
+      <a href="" class="nav1">프로필 수정</a>
+    </div>  
+    <!-- <a href="#" class="profileButton">프로필 수정</a>     -->
+  </div>
+
+    <div class="nav">
+        <div class="navigation">
+        <a href= "{% url 'user_page' %}" class="nav1">My Page</a>
+        <a href="" class="nav1">nav2</a>
+        <a href="{% url 'qa_list' %}" class="nav1">Q&A</a>
+        <a href="" class="nav1">nav4</a>
+        </div>
+    </div>
+
+    <div class = "main1">
+        <div class="user_question">
+            <p>Question : {{userqa.title}} </p>
+        </div>
+        
+        <div class = "user_answer">
+            <p>내용 : {{userqa.question}} </p>
+        </div>
+    </div>
+
+    <div class = "main2">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" >submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

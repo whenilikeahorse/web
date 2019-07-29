@@ -9,6 +9,7 @@
       <div class="profileimg"></div>
     </div>
     <div class="profiletext">
+      ID : {{user.username}}
       <a href="" class="nav1">프로필 수정</a>
     </div>  
     <!-- <a href="#" class="profileButton">프로필 수정</a>     -->
@@ -17,7 +18,7 @@
   <div class="nav">
     <div class="navigation">
       <a href= "{% url 'user_page' %}" class="nav1">My Page</a>
-      <a href="" class="nav1">nav2</a>
+      <a href="" class="nav1">Portfolio</a>
       <a href= "{% url 'qa_list' %}" class="nav1">Q&A</a>
       <a href="" class="nav1">nav4</a>
     </div>
@@ -25,18 +26,21 @@
   <div class="main1">
 
   </div>
+
   <div class="main2">
       {% if user.is_authenticated %}
-        <h4>{{user.username}}님 안녕하세요 !</h4>
-      {% endif %}
-      <p>'{{user.username}}' 님에게 작성된 질문 개수 : {{n}}</p> 
+        <h4>Q & A</h4>
+      <p>'{{user.username}}' 님에게 작성된 총 질문 개수 : {{n}}개</p> 
           
       {% for qa in userqas %}
-      <div class="user_question">
+      <div class="user_question3">
         <a href="{% url 'qa_detail' qa.id %}"><p>{{qa.title}}</p></a>
       </div>
       {% endfor %}
+
+      {% endif %}
   </div>
+
   <div class="main3">
 
   </div>
