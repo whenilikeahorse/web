@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'QandA',
     'mypagemain',
     'account',
+    'selfqa',
 ]
 
 MIDDLEWARE = [
