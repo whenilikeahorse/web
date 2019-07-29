@@ -37,9 +37,16 @@
                         </form>
                         <a class = "nav-link" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
                     </li>
+                    <li class="nav-item">
+                            　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Logined : {{user.username}}</a>
+                    </li>
+
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{%url 'signin'%}">Log In</a>
+                        <a class="nav-link" href="{%url 'login' %}">Log In</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
