@@ -1,7 +1,36 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 {% block content %}
 {% load static %}
 <link rel = "stylesheet" href="{% static 'css/selfqa.css' %}">
 
+<div class="container2">
+    <div class="profile">
+      <div class="profilecontent">
+        <div class="profileimg"></div>
+      </div>
+      <div class="profiletext">
+        <a href="" class="profile1">Edit Profile</a>
+      </div>  
+    </div>
+  
+    <div class="nav">
+      <div class="navigation">
+        <a href="{%url 'selfqa' %}" class="nav1">자문자답</a>
+        <a href="" class="nav1">nav2</a>
+        <a href="" class="nav1">nav3</a>
+        <a href="" class="nav1">nav4</a>
+      </div>
+    </div>
+    <div class="main1">
+        <div class="sandbox sandbox-correct-pronounciation">
+            <h1 class="heading heading-correct-pronounciation">
+              <em>SELF Q&A</em>
+              나에 대해서 더 알아보는 시간
+            </h1>
+        </div> 
+        
+    </div>
+    
+  </div>
 
 {% endblock %}
