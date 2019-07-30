@@ -1,28 +1,52 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
 
-<div class = "introduce1">
-    <h4>나만의 포트폴리오를 작성하고 다른사람들과 공유해보세요</h4>
-    <p>페이지 소개 부분</p>
-</div>
+    <!--Carousel--> 
+    <div class="bd-example">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          </ol>
+
+          <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="2000">
+                  <img src="{% static 'images/7.JPG' %}" class="d-block w-100" alt="..." height="400px;" >
+              </div>
+
+              <div class="carousel-item" data-interval="2000">
+                  <img src="{% static 'images/8.JPG' %}" class="d-block w-100" alt="..." height="400px;">
+              </div>
+          </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+      </div>
+    </div>
+
 
 <div class = "introduce2">
   <h3>다른 User들 page 구경가기 <a href = "{% url 'search_page' %}"> > 검색하러 가기 </a></h3>
-  <div class = "box1">
+
     {% for user in users %}
-      <div class="user_question2">
-        <a href = "{% url 'other_page' user.id %}">
-          <div class="user_question2">
-            {{user.username}}/ pw : 123123
-          </div>
-        </a>
+      <div class="card">
+            <img src="{% static 'images/1.JPG' %}" class="card-img-top" alt="사진" width = "30px" height = "100px">
+              <div class="card-body">
+                <h5 class="card-title">ID :{{user.username}}</h5>
+                <p class="card-text">pw : 123123</p>
+                <p class="card-text">전공 : </p>
+                <a href= "{% url 'other_page' user.id %}" class="btn btn-primary">구경가기</a>
+              </div>
       </div>
     {% endfor %}
-  </div>
 </div>
 
-<div class = "introduce3">
 
-</div>
 
 {% endblock %}

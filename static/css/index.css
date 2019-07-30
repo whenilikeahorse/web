@@ -13,21 +13,27 @@
     width : 500px;
     height : 30px;
 }
+.card{
+    display : inline-block;
+    width : 200px;
+    height : 300px;
+    margin : 10px;
+}
 
 .introduce1{
     height : 300px;
     width : 100%;
     position : relative;
-    background-color: aliceblue;
+    background-color: rgb(255, 241, 226);
     padding : 130px 0px 0px 0px;
     text-align: center;
 }
 
 .introduce2{
-    height : 300px;
+    height : 800px;
     width : 100%;
     position : relative;
-    background-color: antiquewhite;
+    background-color: rgb(255, 249, 241);
     padding : 30px 0px 0px 30px;
 }
 
