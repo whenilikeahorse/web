@@ -8,10 +8,6 @@ urlpatterns = [
     path('', include('main.urls')),
     path('userQ&A/', include('QandA.urls')),
     path('selfqa/',include('selfqa.urls')),
-# <<<<<<< HEAD
     path('mypage/',include('mypagemain.urls')),
     path('account/', include('account.urls')),
-# =======
-# >>>>>>> [Configure rebuild & bootstrap add] 구조 변경 및 부트스트랩 적용
->>>>>>> b0e73ad213edb707d433e0d6a1b261b27bbe2c16
 ]
