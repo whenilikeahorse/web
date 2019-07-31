@@ -1,0 +1,43 @@
+
+  <a href="{% url 'index' %}">돌아가기</a>
+  <form action="." method="post" id="profile-form" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% if form.errors %}
+      
+      <p class ="errornote">입력 정보를 다시 확인하세요. </p>
+      
+      {% endif %}
+      {{error}} 
+  
+      <!--
+      {{ user_form.as_p }}
+      {{ profile_form.as_p }}
+      -->
+  
+          <p class="form_p" >이름</p><br/>
+          
+          {{ user_form.username }}<br/><br/>
+          
+      
+  
+           <p class="form_p">본인확인 이메일</p><br/>
+          
+          {{ user_form.email }}<br/><br/> 
+          
+          <p class="form_p">나이</p><br/>
+          
+          {{ profile_form.age }}<br/><br/>
+          
+          <p class="form_p">직업</p><br/>
+          
+          {{ profile_form.occupation }}<br/><br/>
+          
+          <br/><br/>
+      
+      
+      <!-- 참고 : {{ profile_form.department }} {{ profile_form.phone}} -->
+      
+      <input class="submit-row" type="submit" value="회원 정보 등록 및 수정" />
+      
+  </form>
+     
