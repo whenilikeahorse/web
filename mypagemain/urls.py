@@ -6,4 +6,5 @@ from . import views
 
 urlpatterns = [
     path('', views.main, name="mypagemain"),
+    path('timeline/', views.timeline, name="timeline"),
 ]
