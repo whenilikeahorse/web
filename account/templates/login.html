@@ -1,4 +1,28 @@
 {% extends 'base.html' %}
-{% block contents %}
-<h1>로그인 성공 시 보여질 화면</h1>
+{% block content %}
+    <div class="my-5 mx-auto card" style="text-align: center;">
+        <div class='card-header'>
+            {% if error %}
+                <p>Error : {{error}}</p>
+            {% endif %}
+
+            <h1>Login</h1>
+        </div>
+
+        <div class='card-body'>
+            <div class="mx-auto card-content">
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    Username:<input name="username" type="text" value="">
+                    <br>
+                    <br>
+                    Password:<input name="password" type="password" value="">
+                    <br>
+                    <br>
+                    <input class="btn btn-primary" type="submit" value="Login">
+                </form>
+                <br/>
+            </div>
+        </div>
+    </div>
 {% endblock %}

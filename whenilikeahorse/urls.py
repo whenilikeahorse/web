@@ -7,8 +7,7 @@ urlpatterns = [
     path('', main.views.main, name='main'),
     path('', include('main.urls')),
     path('userQ&A/', include('QandA.urls')),
-<<<<<<< HEAD
-=======
+    path('selfqa/',include('selfqa.urls')),
 # <<<<<<< HEAD
     path('mypage/',include('mypagemain.urls')),
     path('account/', include('account.urls')),
