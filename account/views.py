@@ -91,7 +91,7 @@ def signup(request):
                 user = User.objects.create_user(
                 request.POST['username'], password=request.POST['password1'])
                 auth.login(request, user)
-                return redirect('home')
+                return redirect('main')
         else:
             return render(request, 'signup.html', {'error': 'Passwords must match'})
     else:
@@ -130,7 +130,7 @@ def change_pw(request):
                 user.set_password(new_password)
                 user.save()
                 auth.login(request,user)
-                return redirect("home")
+                return redirect("main")
             else:
                 context.update({'error':"새로운 비밀번호를 다시 확인해주세요."})
     else:
