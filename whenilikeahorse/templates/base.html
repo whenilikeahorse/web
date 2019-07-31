@@ -38,7 +38,10 @@
                         <a class = "nav-link" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">　　　　　　　　　　　　　　　　　　　　　　　　　　　　Logined : {{user.username}}</a>
+                        <a class="nav-link" href="">Logined : {{user.username}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'change_pw' %}">비밀번호변경</a>
                     </li>
                     <li class="nav-item">
                         <form class="form-inline my-2 my-lg-0">

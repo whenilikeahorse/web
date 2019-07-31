@@ -154,7 +154,7 @@ def profile(request):
             print(save_data)
             save_data.save()
             print("valid")
-            return redirect('home')
+            return redirect('user_page')
         else:
             print("error")
             print(user_form.errors, profile_form.errors)

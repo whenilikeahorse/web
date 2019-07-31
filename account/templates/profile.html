@@ -1,5 +1,5 @@
 
-  <a href="{% url 'home' %}">돌아가기</a>
+  <a href="{% url 'index' %}">돌아가기</a>
   <form action="." method="post" id="profile-form" enctype="multipart/form-data">
       {% csrf_token %}
       {% if form.errors %}
