@@ -5,29 +5,28 @@ from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import ClassBlog
+from .models import selfqa
 
-# Create your views here.
-def main(request):
-    return render(request,'selfqa.html')
+# def main(request):
+#     return render(request,'selfqa.html')
 
 class QaView(ListView):
-    model = ClassBlog
+    model = selfqa
 
 class QaCreate(CreateView):
-    model = ClassBlog
-    fields = ['title', 'body']
-    success_url = reverse_lazy('list')
+    model = selfqa
+    fields = ['question', 'answer']
+    success_url = reverse_lazy('selfqa')
 
 class QaDetail(DetailView):
-    model = ClassBlog
+    model = selfqa
 
 class QaUpdate(UpdateView):
-    model = ClassBlog
-    fields = ['title', 'body']
-    success_url = reverse_lazy('list')
+    model = selfqa
+    fields = ['question', 'answer']
+    success_url = reverse_lazy('selfqa')
 
 class QaDelete(DeleteView):
-    model = ClassBlog
-    success_url = reverse_lazy('list')
+    model = selfqa
+    success_url = reverse_lazy('selfqa')
 
