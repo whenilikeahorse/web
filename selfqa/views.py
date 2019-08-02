@@ -12,6 +12,8 @@ from .models import selfqa
 
 class QaView(ListView):
     model = selfqa
+    fields = ['question', 'answer']
+    success_url = reverse_lazy('selfqa')
 
 class QaCreate(CreateView):
     model = selfqa
