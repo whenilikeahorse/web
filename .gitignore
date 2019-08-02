@@ -9,6 +9,12 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
+.vscode
+avenv
 
+<<<<<<< HEAD
 ### MacOS ###
 *.DS_Store
+=======
+.gitignore.swp
+
