@@ -1,43 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
 
-  <a href="{% url 'index' %}">돌아가기</a>
-  <form action="." method="post" id="profile-form" enctype="multipart/form-data">
-      {% csrf_token %}
-      {% if form.errors %}
-      
-      <p class ="errornote">입력 정보를 다시 확인하세요. </p>
-      
-      {% endif %}
-      {{error}} 
-  
-      <!--
-      {{ user_form.as_p }}
-      {{ profile_form.as_p }}
-      -->
-  
-          <p class="form_p" >이름</p><br/>
+
+{% load static %}
+<link rel = "stylesheet" href="{% static 'css/profile.css' %}">
+
+<div class="container2">
+    <div class="profile">
+        <div class="profilecontent">
+            <div class="profileimg"><img src="{{profile_form.file.url}}" alt="no image"></div>
+        </div>
+        <div class="profiletext">
+            ID : {{user.username}}
+            <a href="{% url 'profile' %}" class="nav1">프로필 수정</a>
+        </div>
+        <!-- <a href="#" class="profileButton">프로필 수정</a>     -->
+    </div>
+
+    <div class="nav">
+        <div class="navigation">
+            <a href="{% url 'user_page' %}" class="nav1">My Page</a>
+            <a href="" class="nav1">Portfolio</a>
+            <a href="{% url 'qa_list' %}" class="nav1">Q&A</a>
+            <a href="{%url 'selfqa' %}" class="nav1">Self Q&A</a>
+        </div>
+    </div>
+
+
+    <div class="main1">
+
+        <form action="." method="post" id="profile-form" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            {% if form.errors %}    
+            <p class="errornote">입력 정보를 다시 확인하세요. </p>
+            {% endif %}
+            {{error}}
+
+            <!--
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            -->
+            <p class="form_p">이름: {{ user_form.username }} </p>
+
+            <p class="form_p">이미지:  <input type="file" name="file" accept="image/x-png,image/gif,image/jpeg">
+                <img src="{{profile_form.file}}">
+            </p>
+
+
+            <p class="form_p">나이: {{ profile_form.age }}</p>
           
-          {{ user_form.username }}<br/><br/>
-          
-      
-  
-           <p class="form_p">본인확인 이메일</p><br/>
-          
-          {{ user_form.email }}<br/><br/> 
-          
-          <p class="form_p">나이</p><br/>
-          
-          {{ profile_form.age }}<br/><br/>
-          
-          <p class="form_p">직업</p><br/>
-          
-          {{ profile_form.occupation }}<br/><br/>
-          
-          <br/><br/>
-      
-      
-      <!-- 참고 : {{ profile_form.department }} {{ profile_form.phone}} -->
-      
-      <input class="submit-row" type="submit" value="회원 정보 등록 및 수정" />
-      
-  </form>
-     
+            <p class="form_p">직업: {{ profile_form.occupation }}</p>
+
+            <br />
+
+            <input class="submit-row" type="submit" value="회원 정보 등록 및 수정" />
+
+        </form>
+
+    </div>
+
+
+
+
+{% endblock %}

@@ -222,6 +222,8 @@ box-shadow : 2px 0px 7px rgb(195,195,196);
   box-shadow : 2px 0px 7px rgb(195,195,196);
 }
 
+
+
 .main{
   font-family: 'Eoe_Zno_M'; 
   padding : 20px 50px ;
@@ -231,9 +233,27 @@ box-shadow : 2px 0px 7px rgb(195,195,196);
   height : 800px;
 }
 /* -------------------여기까지 그리드------- */
+.main{
+  font-family: 'Eoe_Zno_M'; 
+  padding : 20px 50px ;
+  margin : 0px 10px 10px 10px;
+  box-shadow : 2px 0px 7px rgb(195,195,196);
+  width : 800px;
+  height : 800px;
+}
 
+/*-------------------프로필수정----------------*/
+.profile-box{
+  padding : 20px 50px ;
+  margin : 10px 10px 10px 10px;
+  overflow: scroll;
 
-
+}
+#profile-form{
+  padding : 20px 50px ;
+  margin : 10px 10px 10px 10px;
+  overflow: scroll;
+}
         
 @font-face { 
   font-family: 'yg-jalnan'; 
