@@ -31,19 +31,19 @@
         </div> 
 
         <div class = "QAlist">
-          <a href="{% url 'new' %}" class="addqa">Add a Question</a>
-          <br>
-
           {%for blog in object_list%}
-            <h2>{{blog.title}}</h2>
-            <h5>{{blog.created_at}}</h5>
-            <p>{{blog.body}}</p>
-            <!-- <a href = "{% url 'detail' blog.id %}" > 자세히보기 </a> <br> -->
-            {{object.question}}
-            {{object.answer}}
-            <a href = "{% url 'change' blog.id %}" > 수정 </a> <br>
-            <a href = "{% url 'del' blog.id %}" > 삭제 </a> <br>
+            <div class="question">
+                <div class="index"> Q </div> 
+                {{blog.question}}</div> <br>        
+            <div class="answer">
+                <div class="index"> A </div> 
+                {{blog.answer}}</div> <br> 
+
+            <a href = "{% url 'change' blog.id %}" class=button1> 수정 </a> 
+            <a href = "{% url 'del' blog.id %}" class=button1 > 삭제 </a><br>
           {%endfor%}
+
+          <a href="{% url 'new' %}" class="addqa">+ Add a Question</a>
 
         </div>
 

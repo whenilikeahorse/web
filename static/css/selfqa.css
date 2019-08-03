@@ -237,18 +237,115 @@ em {
   padding-top: 0.1em;
   text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
   
-  &::before, &::after {
-  content: "§";
+
+
+}
+
+/* --------------------------------------------selfqa 꾸미는 칸 ------------- */
+.index{
+  color: black;
+  float:left;
+  font-family: 'yg-jalnan'; 
+  font-size :30px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0,0,0,0.1);
+}
+
+
+.question{
+  color: black;
+  font-family: 'KimNamyun'; 
+  font-size : 30px;
+  border : 0;
+  outline: 0;
+  text-align : center;
+  background: #fbd14b;
+  border-radius: 2px;
   display: inline-block;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-    opacity: 0.2;
-  margin: 0 0.6em;
-  font-size: 0.5em;
+  height: 50px;
+  margin: 0.5rem;
+  position: relative;
+  width: 600px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+.question:hover {
+  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 
+
+.answer{
+  font-family: 'KimNamyun'; 
+  font-size : 30px;
+  border : 0;
+  outline: 0;
+  text-align : center;
+  background: #dedcee;
+  border-radius: 2px;
+  display: inline-block;
+  height: 50px;
+  margin: 0.5rem;
+  position: relative;
+  width: 600px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.answer:hover {
+  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+
+.button1{
+  margin : 0.5rem;
+  font-family: 'BRBA_B'; 
+  color: #8EC0E4;
+}
+
+
+
+.addqa{
+  
+  font-family: 'yg-jalnan'; 
+  font-size : 20px;
+  border : 0;
+  outline: 0;
+  text-align : center;
+  background: #fe4365;
+  color : white;
+  border-radius: 5px;
+  display: inline-block;
+  height: 40px;
+  margin-left: 8rem;
+  position: relative;
+  width: 400px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.addqa:hover {
+  color : #fc9d9a;
+  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+
+
+@font-face { 
+  font-family: 'yg-jalnan'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal;
+}
+
+@font-face { 
+  font-family: 'KimNamyun'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KimNamyun.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face { 
+  font-family: 'BRBA_B'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; }
