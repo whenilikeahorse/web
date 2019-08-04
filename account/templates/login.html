@@ -8,18 +8,18 @@
 
             <h1>Login</h1>
         </div>
-
-        <div class='card-body'>
+        <br/> <br/> <br/>
+        <div class='text-center'>
             <div class="mx-auto card-content">
-                <form method="POST" action="{% url 'login' %}">
+                <form method="POST" action="{% url 'login' %}" class="loginform">
                     {% csrf_token %}
-                    Username:<input name="username" type="text" value="">
+                    <p class="form_pf">Username:<input name="username" type="text" value=""></p>
                     <br>
                     <br>
-                    Password:<input name="password" type="password" value="">
+                    <p class="form_pf"></p>Password:<input name="password" type="password" value=""></p>
                     <br>
                     <br>
-                    <input class="btn btn-primary" type="submit" value="Login">
+                    <input class="signup_btn" type="submit" value="로그인">
                 </form>
                 <br/>
             </div>

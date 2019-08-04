@@ -1,0 +1,78 @@
+/* main css page */
+@font-face {
+    font-family: 'UhBeenamsoyoung';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeenamsoyoung.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face { font-family: 'SangSangShin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangShin.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: left;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    width: 50%;
+    float: right;
+    clear: both;
+    background-color: rgb(46, 66, 248);
+    height: 500px;
+    text-align: center;
+}
+
+form {
+    margin-top: 14%;
+}
+
+.sub {
+    clear: both;
+}
+
+.form_pf {
+    font-family: 'BMDOHYEON';
+    font-size: 15px;
+    color: #fff;
+}
+
+.registerform {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(146, 146, 146, 0.897);
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.login_btn {
+    background-color: rgb(46, 66, 248);
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    color: rgb(253, 249, 249);
+    border-style: solid;
+    font-weight: 100;
+    font-size: 15px;
+    font-family: 'BMDOHYEON';
+}
+.signup-title {
+    font-family: 'SangSangShin'; 
+    color: rgb(241, 239, 237);
+    font-weight: bold;
+    font-size: 40px;
+}
