@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+<link rel = "stylesheet" href="{% static 'css/selfqa.css' %}">
+
+<div class="container2">
+  <div class="profile">
+    <div class="profilecontent">
+      <div class="profileimg"></div>
+    </div>
+    <div class="profiletext">
+      ID : {{user.username}}
+      <a href="" class="nav1">프로필 수정</a>
+    </div>  
+  </div>
+
+  <div class="nav">
+    <div class="navigation">
+      <a href= "{% url 'user_page' %}" class="nav1">My Page</a>
+      <a href="" class="nav1">Portfolio</a>
+      <a href= "{% url 'qa_list' %}" class="nav1">Q&A</a>
+      <a href="{%url 'selfqa' %}" class="nav1">Self Q&A</a>
+    </div>
+  </div>
+    <div class="main1">
+        <div class="sandbox sandbox-correct-pronounciation">
+            <h1 class="heading heading-correct-pronounciation">
+              <em>SELF Q&A</em>
+              나에 대해서 더 알아보는 시간
+            </h1>
+        </div> 
+
+        <div class = "QAlist">
+          {%for blog in object_list%}
+            <div class="question">
+                <div class="index"> Q </div> 
+                {{blog.question}}</div> <br>        
+            <div class="answer">
+                <div class="index"> A </div> 
+                {{blog.answer}}</div> <br> 
+
+            <a href = "{% url 'change' blog.id %}" class=button1> 수정 </a> 
+            <a href = "{% url 'del' blog.id %}" class=button1 > 삭제 </a><br>
+          {%endfor%}
+
+          <a href="{% url 'new' %}" class="addqa">+ Add a Question</a>
+
+        </div>
+
+        
+    </div>
+    
+  </div>
+
+{% endblock %}

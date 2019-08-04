@@ -12,7 +12,8 @@ class UserForm(forms.ModelForm):
 class ProfileForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(ProfileForm, self).__init__(*args, **kwargs)
+        self.fields['file'].required = False
 
     class Meta():
         model = Profile
-        fields = ('age', 'occupation')
+        fields = ('file','age', 'occupation')

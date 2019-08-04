@@ -1,0 +1,256 @@
+.container2{
+    margin : 50px 0px;
+    height : 800px;
+    width : 100%;
+    display : grid;
+    /* position : relative; */
+    grid-template-areas : 
+    "profile main1"
+    "nav main1";
+    grid-template-rows: 250px 500px;
+    grid-template-columns: 200px 800px;
+  }
+  
+  .profile{
+    font-family: 'Eoe_Zno_M'; 
+    color : white;
+    grid-area : profile;
+    
+  }
+  
+  .profilecontent{
+    height: 170px;
+    background-color : rgb(191, 225, 231);
+    box-shadow : 2px 0px 7px rgb(195,195,196);
+    position:relative;
+    /* border-top-left-radius: 5%;
+    border-top-right-radius: 5%; */
+  }
+  
+  
+  .profileimg{
+    position:absolute;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(255,255,255);
+    /* margin : auto; */
+    border-radius : 50%;
+    border-style : solid;
+    border-width : 1px;
+    border-color : rgb(195, 196, 197);
+    margin-left : 25px;
+    margin-top : 10px;
+    
+  }
+  
+  .profiletext{
+    height: 75px;
+    background-color : rgb(151, 161, 163);
+    box-shadow : 3px 2px 7px rgb(195, 195, 196);
+    position: relative;
+    text-align: center;
+  }
+  
+  
+  
+  .nav{
+    grid-area : nav;
+    background-color: rgb(255,255,255);
+    padding: 0px;
+    color: white;
+    text-align: center;
+  }
+  
+  .navigation{
+    margin-top : 10px;
+    padding : 30px;
+    height: 490px;
+    width: 100%;
+    background-color : rgb(191, 225, 231);
+    box-shadow : 2px 0px 7px rgb(195,195,196);
+    position:relative;
+    color : rgb(255,255,255);
+  }
+  
+  .profile1{
+    font-family: 'BBTreeGR'; 
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    max-width: 200px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 0;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .profile1:hover,
+  .profile1:focus,
+  .profile1:active {
+    letter-spacing: 5px;
+  }
+  .profile1:after,
+  .profile1:before {
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+  .profile1:hover:after,
+  .profile1:hover:before {
+    border-color: #fff;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+  }
+  .profile1:hover:before {
+    bottom: auto;
+    top: 0;
+  }
+  
+  
+  /* ---------------------navbutton------------------------ */
+  .nav1{
+    font-family: 'BBTreeGR'; 
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    max-width: 200px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 0;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    margin-bottom: 10px;
+  }
+  
+  .nav1:hover,
+  .nav1:focus,
+  .nav1:active {
+    letter-spacing: 5px;
+  }
+  .nav1:after,
+  .nav1:before {
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+  .nav1:hover:after,
+  .nav1:hover:before {
+    border-color: #fff;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+  }
+  .nav1:hover:before {
+    bottom: auto;
+    top: 0;
+  }
+  
+  /* ----------------------------contents---------------- */
+  .main1{
+    font-family: 'Eoe_Zno_M'; 
+    grid-area: main1;
+    padding : 20px 50px ;
+    margin : 0px 10px 10px 10px;
+    box-shadow : 2px 0px 7px rgb(195,195,196);
+    overflow-y: scroll;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  @font-face { 
+    font-family: 'yg-jalnan'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
+  
+    @font-face { 
+      font-family: 'BBTreeGR'; 
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff'); 
+      font-weight: normal; 
+      font-style: normal; 
+    }
+  
+  /* --------------------이제부터 main꾸미기----------------------- */
+  
+  @font-face { 
+      font-family: 'OTEnjoystoriesBA'; 
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff'); 
+      font-weight: normal; 
+      font-style: normal; 
+  }
+  
+  .sandbox-correct-pronounciation {
+    padding: 7px 0 3px 0;
+  }
+  
+  .heading-correct-pronounciation {
+  
+    margin: auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  h1 {
+    color: #fff;
+    font-family: 'OTEnjoystoriesBA'; 
+    font-size: 1.0em;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+  }
+  
+  em {
+    font-family: 'OTEnjoystoriesBA'; 
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    font-style:normal;
+    padding-top: 0.1em;
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    
+    &::before, &::after {
+    content: "§";
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+      opacity: 0.2;
+    margin: 0 0.6em;
+    font-size: 0.5em;
+  }
+  
+  }
+  
+  

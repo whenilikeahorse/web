@@ -91,7 +91,7 @@ def signup(request):
                 user = User.objects.create_user(
                 request.POST['username'], password=request.POST['password1'])
                 auth.login(request, user)
-                return redirect('home')
+                return redirect('main')
         else:
             return render(request, 'signup.html', {'error': 'Passwords must match'})
     else:
@@ -130,7 +130,7 @@ def change_pw(request):
                 user.set_password(new_password)
                 user.save()
                 auth.login(request,user)
-                return redirect("home")
+                return redirect("main")
             else:
                 context.update({'error':"새로운 비밀번호를 다시 확인해주세요."})
     else:
@@ -145,7 +145,7 @@ def profile(request):
     if request.method == 'POST':
         print(request.user)
         # user_form = UserForm(request.POST or None, instance=request.user)
-        profile_form = ProfileForm(request.POST or None, instance=request.user.profile)
+        profile_form = ProfileForm(request.POST or None,request.FILES,instance=request.user.profile)
         # if user_form.is_valid() and profile_form.is_valid():
         if profile_form.is_valid():
             # user_form.save()
@@ -166,7 +166,7 @@ def profile(request):
     else:
         print("not post")
         user_form = UserForm(instance=request.user)
-        profile_form = ProfileForm(instance=request.user.profile)
+        profile_form = ProfileForm(request.FILES,instance=request.user.profile)
 
     return render(request, 'profile.html', {
         'user_form': user_form,
