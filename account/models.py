@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your models here.
 class Profile(models.Model):
      user = models.OneToOneField(User, on_delete=models.CASCADE)
-     age = models.TextField(max_length=10,blank=True)
+     age = models.TextField(max_length=10,blank=True,widget=forms.TextInput(attrs={'placeholder': 'ageform'}))
      occupation = models.TextField(max_length=30,blank=True)
 
      def __str__(self):
