@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from QandA.models import Userqa
 
 def main(request):
-    users = User.objects.all().exclude(username = request.user)
+    users = User.objects.all().exclude(username = request.user)[0:6]
     
     return render(request, 'index.html', {
         'users' : users,

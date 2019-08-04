@@ -37,7 +37,7 @@
   "nav main2"
   "nav main3";
   grid-template-rows: 250px 250px 250px;
-  grid-template-columns: 200px 800px;
+  grid-template-columns: 200px 1100px;
 }
 
 .profile{
