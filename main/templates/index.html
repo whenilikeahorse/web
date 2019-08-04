@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base_main.html' %}
 {% load staticfiles %}
 {% block content %}
 
@@ -12,11 +12,11 @@
 
           <div class="carousel-inner">
               <div class="carousel-item active" data-interval="2000">
-                  <img src="{% static 'images/7.JPG' %}" class="d-block w-100" alt="..." height="400px;" >
+                  <img src="{% static 'images/7.JPG' %}" class="d-block w-100" alt="..." height="450px;" >
               </div>
 
               <div class="carousel-item" data-interval="2000">
-                  <img src="{% static 'images/8.JPG' %}" class="d-block w-100" alt="..." height="400px;">
+                  <img src="{% static 'images/8.JPG' %}" class="d-block w-100" alt="..." height="450px;">
               </div>
           </div>
               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -29,24 +29,40 @@
               </a>
       </div>
     </div>
-
-
-<div class = "introduce2">
-  <h3>다른 User들 page 구경가기 <a href = "{% url 'search_page' %}"> > 검색하러 가기 </a></h3>
-
-    {% for user in users %}
-      <div class="card">
-            <img src="{% static 'images/1.JPG' %}" class="card-img-top" alt="사진" width = "30px" height = "100px">
-              <div class="card-body">
-                <h5 class="card-title">ID :{{user.username}}</h5>
-                <p class="card-text">pw : 123123</p>
-                <p class="card-text">전공 : </p>
-                <a href= "{% url 'other_page' user.id %}" class="btn btn-primary">구경가기</a>
+<div class = "main_container">
+  
+  <div class = "main_grid">
+    
+    <div class = "left">
+      <h3>Portfolio 훔쳐보기</h3>
+      <div class = "user_cards">
+          {% for user in users %}
+              <div class="user_card">
+                <div class="user_image">
+                  <img src="{% static 'images/1.JPG' %}" alt="사진" width = "180px" height = "100px">
+                </div>
+                <div class="user_ID">
+                  <p>ID :{{user.username}}</p>
+                </div>
+                <div class="user_text">
+                  <p>pw : 123123</p>
+                </div>
+                <div class="user_text">
+                  <p>전공 : </p>
+                </div>
               </div>
+          {% endfor %}
       </div>
-    {% endfor %}
+    </div>
+
+    <div class = "right">
+      <a href=""><h3>User들의 전공 순위</h3></a>
+    </div>
+
+    <div class = "art">
+      <a href=""><h3>Portfolio 작성 tips</h3></a>
+    </div>
+
+  </div>
 </div>
-
-
-
 {% endblock %}

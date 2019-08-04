@@ -18,67 +18,65 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <style>p { font-family:'Josefin Sans' } .btn { font-family: 'Josefin Sans'; } </style>
   </head>
+
   <body style="height: 100%; width: 100%; background: white;">
+    <nav>
+        <table class = "nav_table">
+            <tr>
+                <td class = "nav_brand">
+                    <a href="{%url 'main'%}">
+                        <img src="{% static 'images/1.JPG' %}" width="50" height="30">나때는 말이야
+                    </a>
+                </td>
+                <td class = "nav_item">
 
-        <nav>
-                <table class = "nav_table">
-                    <tr>
-                        <td class = "nav_brand">
-                            <a href="{%url 'main'%}">
-                                <img src="{% static 'images/1.JPG' %}" width="50" height="30">나때는 말이야
-                            </a>
-                        </td>
-                        <td class = "nav_item">
-        
-                        </td>
-                        <td class = "nav_item">
-        
-                        </td>
-                        <td class = "nav_item">
-        
-                        </td>
-                        <td class = "nav_item">
-                
-                        </td>
-                        <td class = "nav_item">
-                
-                        </td>
-                        <td class = "nav_item">
-                
-                        </td>
-        
-                        {% if user.is_authenticated %}
-                        <td class = "nav_item">
-                            <a href="{%url 'user_page'%}">My Page</a>
-                        </td>
-                        <td class = "nav_item">
-                            <form id="logout" method="POST" action="{% url 'logout' %}">
-                                {% csrf_token %}
-                                <input type="hidden" />
-                            </form>
-                            <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
-                        </td>
-                        {% else %}
-                        <td class = "nav_item">
-                            <a href="{%url 'login' %}">Log In</a>
-                        </td>
-                        <td class = "nav_item">
-                            <a href="{% url 'signup' %}">Sign Up</a>
-                        </td>
-                        {% endif %}
-                    </tr>
-                </table>
-            </nav>
+                </td>
+                <td class = "nav_item">
 
-    <div class = "main_container">
+                </td>
+                <td class = "nav_item">
+
+                </td>
+                <td class = "nav_item">
+        
+                </td>
+                <td class = "nav_item">
+        
+                </td>
+                <td class = "nav_item">
+        
+                </td>
+
+                {% if user.is_authenticated %}
+                <td class = "nav_item">
+                    <a href="{%url 'user_page'%}">My Page</a>
+                </td>
+                <td class = "nav_item">
+                    <form id="logout" method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <input type="hidden" />
+                    </form>
+                    <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+                </td>
+                {% else %}
+                <td class = "nav_item">
+                    <a href="{%url 'login' %}">Log In</a>
+                </td>
+                <td class = "nav_item">
+                    <a href="{% url 'signup' %}">Sign Up</a>
+                </td>
+                {% endif %}
+            </tr>
+        </table>
+    </nav>
+
         {% block content %}
         {% endblock %}
-    </div>
 
     <footer>
         <p> &copy; 아주대학교 멋쟁이사자차럼 7기</p>
     </footer>
-    
+
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circleclass="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circleclass="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"stroke="#f4b214"/></svg></div>
 

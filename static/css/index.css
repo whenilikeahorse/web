@@ -9,15 +9,120 @@
     grid-template-columns: 2fr 8fr;
 }
 
+.carousel{
+    height: 350px;
+    display : relative;
+}
+
+nav{
+    height:60px;
+    font-family: 'LotteMartHappy';
+    font-size : 20px;
+    padding : 0px 130px;
+    border-bottom : 1px solid rgb(134, 134, 134);
+}
+
+.nav_table{
+    width : 100%;
+}
+
+.nav_brand{
+    padding : 5px 10px;
+    width : 100px;
+    text-align : left;
+    font-style: bold;
+    font-size : 25px;
+}
+
+.nav_item{
+    width : 30px;
+    text-align : center;
+    padding : 5px;
+}
+
+.main_container{
+    margin: 0px 100px;
+}
+
+.main_grid{
+    height : 1000px;
+    width : 100%;
+    display : grid;
+    position : relative;
+    grid-template-areas : "left right"
+                          "art art";
+    grid-template-rows: 600px 400px;
+    grid-template-columns: 6fr 4fr;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.art{
+    grid-area: art;
+    padding : 30px 20px ;
+    border-top: 0.1em solid rgba(228, 228, 228, 0.788);
+}
+.main_container{
+    margin : 0px 100px;
+}
+
+.left{
+    grid-area: left;
+    padding : 30px 20px ;
+    border-right: 0.1em solid rgba(228, 228, 228, 0.788);
+}
+
+.right{
+    grid-area: right;
+    padding : 30px 50px ;
+}
+.user_cards{
+    margin : 20px 10px;
+    font-family: 'yg-jalnan';
+}
+.user_card{
+    width : 200px;
+    height : 200px;
+    display : block;
+    margin : 10px;
+    border : 0.1em solid rgba(207, 207, 207, 0.788);
+    display : inline-block;
+    position : relative;
+    font-family: 'LotteMartHappy';
+}
+
+.user_image{
+    text-align: left;
+    height : 100px;
+}
+
+.user_text{
+    text-align: left;
+    font-size: 15px;
+    height : 20px;
+}
+
+.user_ID{
+    font-size: 20px;
+    text-align: left;
+    height : 30px;
+}
+
+footer{
+    width : 100%;
+    background-color: rgb(70, 70, 70);
+    bottom: 0;
+    height : 200px;
+    text-align: center;
+    padding-top : 80px;
+    font-size : 20px;
+    color : white;
+    font-family: 'LotteMartHappy';
+}
+
 .title{
     width : 500px;
     height : 30px;
-}
-.card{
-    display : inline-block;
-    width : 200px;
-    height : 300px;
-    margin : 10px;
 }
 
 .introduce1{
@@ -27,6 +132,7 @@
     background-color: rgb(255, 241, 226);
     padding : 130px 0px 0px 0px;
     text-align: center;
+    margin : 200px 200px;
 }
 
 .introduce2{
@@ -211,3 +317,11 @@ button:active {
 }
 
 @font-face { font-family: 'Eoe_Zno_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'LotteMartHappy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2')format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+}
+
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }

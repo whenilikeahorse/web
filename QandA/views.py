@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.conf import settings
+from django.forms import formset_factory
 
 def qa_list(request):
     logined = request.user   # login한 User
@@ -21,15 +22,24 @@ def qa_list(request):
 
 @login_required
 def qa_new(request):
+    user_name = request.user.username
+    UserqaFormset = formset_factory(UserqaForm, extra = 0)
+    formset2 = UserqaFormset( initial = [    # form의 초기값을 지정해주기 위한 formset 사용
+        {
+            'author' : user_name,
+            'reader' : "write nickname!"
+    }])
+
     if request.method == "POST":
-        form = UserqaForm(request.POST)
-        if form.is_valid():
-            qa = form.save(commit=False)    # commit = False좀 알아보자 // 바로 저장 안하려고 하는거라는데
+        formset = UserqaFormset(request.POST)
+        
+        if formset.is_valid():
+            qa = formset.save(commit=False)    # commit = False좀 알아보자 // 바로 저장 안하려고 하는거라는데
             qa.save()
-            return redirect('index')  # POST로 form 이 채워져있으면 form을 수정하고 qa_list로 전달해줌
+            return redirect('index')  # POST로 form 이 채워져있으면 form을 수정하고 index 'url'을 이동한다
     else:
-        form = UserqaForm()     # default는 비워진 form 보여주고
-        return render(request, 'qa_form.html', {'form': form } ) # form을 사용할 곳인 templates에 form 전달
+        formset = formset2     # default는 작성자가 request.user인 formset을 보여준다
+    return render(request, 'qa_form.html', {'formset': formset} ) # form을 사용할 곳인 templates에 form 전달
 
 @login_required
 def qa_answer(request, qa_id):

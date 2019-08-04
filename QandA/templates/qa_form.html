@@ -28,9 +28,12 @@
     <div class = "main1">
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            <table>
+              {{ formset }}
+            </table>
             <button type="submit" >submit</button>
         </form>
+        {{username}}
     </div>
 </div>
 {% endblock %}
