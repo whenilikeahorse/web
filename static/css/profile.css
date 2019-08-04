@@ -258,7 +258,7 @@
     font-family: 'UhBeenamsoyoung'; 
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeenamsoyoung.woff') format('woff'); 
     font-weight: normal; font-style: normal; }
-  .submit-row {
+  .submit-row,.login_btn {
     background-color : rgb(54, 192, 216);
     border-radius: 10px;
     color:rgb(253, 249, 249);
@@ -268,7 +268,7 @@
     font-weight: 100;
     font-size: 15px;
   }
-  .usernameform,.ageform,.genderform,.occupationform,.companyform,.majorform,.interestform{
+  .usernameform,.ageform,.genderform,.occupationform,.companyform,.majorform,.interestform,.login_input{
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
@@ -278,11 +278,11 @@
     -moz-appearance: none;
     appearance: none;
   }
-  .form_pf{
+  .form_pf,.username_form_text,.password_form_text,.confirm_password_form_text{
     font-family: 'UhBeenamsoyoung'; 
     font-size: 15px;
   }
-  .profile_title{
+  .profile_title,.login_title{
     font-family: 'UhBeenamsoyoung'; 
     color:rgb(5, 189, 221);
     font-weight: bold;
@@ -290,5 +290,5 @@
   }
   .line{
     border: none;
-    border:2px dashed darkturquoise;
+    border:2px dashed rgb(165, 235, 252);
   }

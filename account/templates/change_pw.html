@@ -1,4 +1,32 @@
-<div class="container">
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% load static %}
+<link rel = "stylesheet" href="{% static 'css/profile.css' %}">
+
+<div class="container2">
+    <div class="profile">
+        <div class="profilecontent">
+            <div class="profileimg"><img src="{{profile_form.file.url}}" alt="no image"></div>
+        </div>
+        <div class="profiletext">
+            ID : {{user.username}}
+            <a href="{% url 'profile' %}" class="nav1">프로필 수정</a>
+        </div>
+        <!-- <a href="#" class="profileButton">프로필 수정</a>     -->
+    </div>
+
+    <div class="nav">
+        <div class="navigation">
+            <a href="{% url 'user_page' %}" class="nav1">My Page</a>
+            <a href="" class="nav1">Portfolio</a>
+            <a href="{% url 'qa_list' %}" class="nav1">Q&A</a>
+            <a href="{%url 'selfqa' %}" class="nav1">Self Q&A</a>
+        </div>
+    </div>
+
+<div class="main1">
     <div class="login_container">
                 <div class="error_message">
             {{error}} 
@@ -6,20 +34,23 @@
         <div class="login_title">
             Change Password
         </div>
+        <hr class=line>
+        <br>
         <form method="POST" action="{% url 'change_pw' %}" class="login_form">
             {% csrf_token %}
 
             <div class="login_input_container">
-                <div class="username_form_text">Origin Password</div>
+                <div class="username_form_text">기존 비밀번호 :</div>
                 <div class="input_container">
                     <input class="login_input" name="origin_password" type="password">
                 </div>
-
-                <div class="password_form_text"> New Password</div>
+                <br>
+                <div class="password_form_text">새 비밀번호 :</div>
                 <div class="input_container">
                     <input class="login_input" name="password1" type="password">
                 </div>
-                <div class="confirm_password_form_text">Confirm Password</div>
+                <br>
+                <div class="confirm_password_form_text">새 비밀번호 입력 : </div>
                 <div class="input_container">
                     <input class="login_input" name="password2" type="password">
                 </div>
@@ -30,3 +61,6 @@
     </div>
     </form>
 </div>
+
+
+{% endblock %}
