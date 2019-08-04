@@ -28,7 +28,8 @@
 
 
     <div class="main1">
-
+            <p class=profile_title>My Profile...</p>
+            <hr class=line>
         <form action="." method="post" id="profile-form" enctype="multipart/form-data" novalidate>
             {% csrf_token %}
             {% if form.errors %}    
@@ -40,20 +41,26 @@
             {{ user_form.as_p }}
             {{ profile_form.as_p }}
             -->
-            <p class="form_p">이름: {{ user_form.username }} </p>
+            <br/>
+            <p class="form_pf">이름: &nbsp;&nbsp;{{ user_form.username }} </p>
 
-            <p class="form_p">이미지:  <input type="file" name="file" accept="image/x-png,image/gif,image/jpeg">
+            <p class="form_pf">프로필사진: &nbsp;&nbsp; <input type="file" name="file" accept="image/x-png,image/gif,image/jpeg">
                 <img src="{{profile_form.file}}">
             </p>
+            <p class="form_pf">성별:&nbsp;&nbsp;  {{ profile_form.gender }}</p>
 
-
-            <p class="form_p">나이: {{ profile_form.age }}</p>
+            <p class="form_pf">나이: &nbsp;&nbsp; {{ profile_form.age }}</p>
           
-            <p class="form_p">직업: {{ profile_form.occupation }}</p>
+            <p class="form_pf">직업: &nbsp;&nbsp; {{ profile_form.occupation }}</p>
 
+            <p class="form_pf">학교명/직장명:&nbsp;&nbsp;  {{ profile_form.company }}</p>
+
+            <p class="form_pf">전공:&nbsp;&nbsp;  {{ profile_form.major }}</p>
+
+            <p class="form_pf">관심사:&nbsp;&nbsp;  {{ profile_form.interest }}</p>
             <br />
 
-            <input class="submit-row" type="submit" value="회원 정보 등록 및 수정" />
+            <input class="submit-row" type="submit" value="저장하기" />
 
         </form>
 

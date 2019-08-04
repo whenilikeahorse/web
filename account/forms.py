@@ -8,6 +8,9 @@ class UserForm(forms.ModelForm):
     class Meta():
         model = User
         fields = ('username','email','password')
+        widgets = {
+            'username': forms.TextInput(attrs={'class': 'usernameform'}),
+        }
 
 class ProfileForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -16,4 +19,13 @@ class ProfileForm(forms.ModelForm):
 
     class Meta():
         model = Profile
-        fields = ('file','age', 'occupation')
+        fields = ('file','age','gender', 'occupation','company','major','interest')
+        widgets = {
+            # 'file': forms.FileInput(attrs={'class': 'fileform'}),
+            'age': forms.TextInput(attrs={'class': 'ageform'}),
+            'gender': forms.Select(attrs={'class': 'genderform'}),
+            'occupation' : forms.TextInput(attrs={'class': 'occupationform'}),
+            'company' : forms.TextInput(attrs={'class': 'companyform'}),
+            'major' : forms.TextInput(attrs={'class': 'majorform'}),
+            'interest' : forms.TextInput(attrs={'class': 'interestform'}),
+        }

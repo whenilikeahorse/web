@@ -253,4 +253,42 @@
   
   }
   
-  
+  /*---------------profile form--------------------*/
+  @font-face { 
+    font-family: 'UhBeenamsoyoung'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeenamsoyoung.woff') format('woff'); 
+    font-weight: normal; font-style: normal; }
+  .submit-row {
+    background-color : rgb(54, 192, 216);
+    border-radius: 10px;
+    color:rgb(253, 249, 249);
+    border-style: solid;
+    float:right;
+    font-family: 'UhBeenamsoyoung'; 
+    font-weight: 100;
+    font-size: 15px;
+  }
+  .usernameform,.ageform,.genderform,.occupationform,.companyform,.majorform,.interestform{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color:rgba(146, 146, 146, 0.897);
+    box-shadow: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .form_pf{
+    font-family: 'UhBeenamsoyoung'; 
+    font-size: 15px;
+  }
+  .profile_title{
+    font-family: 'UhBeenamsoyoung'; 
+    color:rgb(5, 189, 221);
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .line{
+    border: none;
+    border:2px dashed darkturquoise;
+  }

@@ -166,7 +166,7 @@ def profile(request):
     else:
         print("not post")
         user_form = UserForm(instance=request.user)
-        profile_form = ProfileForm(request.FILES,instance=request.user.profile)
+        profile_form = ProfileForm(instance=request.user.profile)
 
     return render(request, 'profile.html', {
         'user_form': user_form,

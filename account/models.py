@@ -10,9 +10,19 @@ from imagekit.processors import ResizeToFill #image
 
 # Create your models here.
 class Profile(models.Model):
+     GENDER_MALE = 'm'
+     GENDER_FEMALE = 'f'
+     GENDER_CHOICES = (
+        (GENDER_MALE, '남성'),
+        (GENDER_FEMALE, '여성'),
+     )
      user = models.OneToOneField(User, on_delete=models.CASCADE)
+     gender = models.TextField(max_length=10,blank=True,choices=GENDER_CHOICES)
      age = models.TextField(max_length=10,blank=True)
      occupation = models.TextField(max_length=20,blank=True)
+     major = models.TextField(max_length=10,blank=True)
+     company = models.TextField(max_length=10,blank=True)
+     interest = models.TextField(max_length=10,blank=True)
      file = models.FileField(null=True)
 
      def __str__(self):
