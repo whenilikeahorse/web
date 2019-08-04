@@ -2,35 +2,37 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div class="my-5 mx-auto card" style="text-align: center;">
+{% load static %}
+<link rel = "stylesheet" href="{% static 'css/profile.css' %}">
 
-        <div class='card-header'>
+    <body class="text-center">
+        <br>
+        <img src = "/static/images/horse3.png" style="height:230px;">
+
+      
             {% if error %}
             {{ error }}
             {% endif %}
 
-            <h1>Sign Up!</h1>
-        </div>
+        <p class="signup-title">Sign Up</p>
+        
 
-        <div class='card-body'>
-            <div class="mx-auto card-content">
+        <div class='register_main'>
                 <form method="POST" action="{% url 'signup'%}">
                     {% csrf_token %}    
 
-                    Username: <input name="username" type="text" value="">
+                    <p class="form_pf">아이디/이름: &nbsp;&nbsp;<input class="registerform" name="username" type="text" value=""></p>
                     <br>
+                    <p class="form_pf">비밀번호: &nbsp;&nbsp;<input class="registerform" name="password1" type="password" value=""></p>
                     <br>
-                    Password: <input name="password1" type="password" value="">
+                    <p class="form_pf">비밀번호 확인:&nbsp;&nbsp;<input class="registerform" name="password2" type="password" value=""> </p> 
                     <br>
-                    <br>
-                    Confirm Password: <input name="password2" type="password" value="">
-                    <br>
-                    <br>
-                    <input class="btn btn-primary" type="submit" value="Sign Up!">
+                    <input class="signup_btn" type="submit" value="회원가입 GO">
                 </form>
-            </div>
+
         </div>
-    </div>
+        <br><br>
+    </body>
 {% endblock %}
     
 

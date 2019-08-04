@@ -268,7 +268,7 @@
     font-weight: 100;
     font-size: 15px;
   }
-  .usernameform,.ageform,.genderform,.occupationform,.companyform,.majorform,.interestform,.login_input{
+  .usernameform,.ageform,.genderform,.occupationform,.companyform,.majorform,.interestform,.login_input,.registerform{
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
@@ -278,7 +278,7 @@
     -moz-appearance: none;
     appearance: none;
   }
-  .form_pf,.username_form_text,.password_form_text,.confirm_password_form_text{
+  .form_pf,.username_form_text,.password_form_text,.confirm_password_form_text,.register_main{
     font-family: 'UhBeenamsoyoung'; 
     font-size: 15px;
   }
@@ -291,4 +291,20 @@
   .line{
     border: none;
     border:2px dashed rgb(165, 235, 252);
+  }
+  /*---------------register--------------------*/
+  .signup-title{
+    font-family: 'UhBeenamsoyoung'; 
+    color:rgb(236, 114, 57);
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .signup_btn{
+    background-color : rgb(73, 61, 243);
+    border-radius: 10px;
+    color:rgb(253, 249, 249);
+    border-style: solid;
+    font-weight: 100;
+    font-size: 15px;
+    font-family: 'BBTreeGR'; 
   }
