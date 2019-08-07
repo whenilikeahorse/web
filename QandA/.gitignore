@@ -1,3 +1,4 @@
+*.py[cod]
 *.log
 *.pot
 *.pyc
@@ -7,5 +8,3 @@ db.sqlite3
 media
 .vscode
 avenv
-
-*.py[cod]
