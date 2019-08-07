@@ -11,8 +11,13 @@ db.sqlite3
 media
 .vscode
 avenv
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+*.py[cod]
+
+>>>>>>> origin/kwangil-feature
 ### MacOS ###
 *.DS_Store
 =======
