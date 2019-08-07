@@ -38,6 +38,7 @@
       <h3>Portfolio 훔쳐보기</h3>
       <div class = "user_cards">
           {% for user in users %}
+          <a href="{% url 'other_page' user.id %}">
               <div class="user_card">
                 <div class="user_image">
                   <img src="{% static 'images/1.JPG' %}" alt="사진" width = "180px" height = "100px">
@@ -52,6 +53,7 @@
                   <p>전공 : </p>
                 </div>
               </div>
+            </a>
           {% endfor %}
       </div>
     </div>
