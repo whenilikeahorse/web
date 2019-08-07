@@ -3,3 +3,4 @@ avenv/
 .vscode
 
 .gitignore.swp
+__pycache__
