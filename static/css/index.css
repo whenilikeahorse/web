@@ -1,16 +1,6 @@
-.container2{
-    margin : 50px 0px;
-    height : 800px;
-    width : 100%;
-    display : grid;
-    position : relative;
-    grid-template-areas : "nav main";
-    grid-template-rows: 800px;
-    grid-template-columns: 2fr 8fr;
-}
 
 .carousel{
-    height: 350px;
+    height: 450px;
     display : relative;
 }
 
@@ -53,7 +43,6 @@ nav{
                           "art art";
     grid-template-rows: 600px 400px;
     grid-template-columns: 6fr 4fr;
-    padding-top: 100px;
     padding-bottom: 100px;
 }
 
@@ -270,6 +259,20 @@ button{
 
 button:active {
     transform : scale(0.9);
+}
+
+a:link{
+    color : black;
+}
+
+a:visited{
+    color : black;
+}
+a:active{
+    color : black;
+}
+a:hover{
+    color : black;
 }
 
 @font-face { 
