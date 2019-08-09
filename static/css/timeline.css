@@ -181,3 +181,96 @@
             right: auto;
         }
 }
+
+
+/* horizontal TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.inline {
+    display: inline;
+}
+
+.btn-more {
+    float: right;
+    border-radius: 10px;
+}
+
+
+.h_timeline {
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow-x: hidden;
+  }
+  
+  .h_timeline ol {
+    font-size: 0;
+    width: 100vw;
+    padding: 10px 0;
+    transition: all 1s;
+  }
+  
+  .h_timeline ol li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    height: 1px;
+    background: lightgray;
+  }
+
+  .h_timeline ol li:only-child { width: calc(100% - 100px); }                          /* 노드가 하나일 때 선택 */
+  .h_timeline ol li:first-child:nth-last-child(2),                       /* 노드가 둘 일 때, 1번 노드 선택 */
+  .h_timeline ol li:first-child:nth-last-child(2)+li { width: calc(50% - 56px); }     /* 노드가 둘 일 때, 2번 노드 선택 */
+  .h_timeline ol li:first-child:nth-last-child(3),                       /* 노드가 셋 일 때, 1번 노드 선택 */
+  .h_timeline ol li:first-child:nth-last-child(3)~li { width: calc(33.33% - 42px); }  /* 노드가 셋 일 때, 2~3번째 노드 선택 */
+  .h_timeline ol li:first-child:nth-last-child(4),                       /* 노드가 넷 일 때, 1번 노드 선택 */
+  .h_timeline ol li:first-child:nth-last-child(4)~li { width: calc(25% - 35px); }     /* 노드가 넷 일 때, 2~4번째 노드 선택 */
+  .h_timeline ol li:first-child:nth-last-child(5),                       /* 노드가 넷 일 때, 1번 노드 선택 */
+  .h_timeline ol li:first-child:nth-last-child(5)~li { width: calc(20% - 31px); }     /* 노드가 넷 일 때, 2~4번째 노드 선택 */
+  
+  .h_timeline ol li:not(:first-child) {
+    margin-left: 14px;
+  }
+  
+  .h_timeline .activity li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgb(180, 60, 47);
+  }
+
+  .h_timeline .project li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgb(241, 196, 14);
+  }
+
+  .h_timeline .intern li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgb(21, 160, 133);
+  }
+
+  .timeline-info {
+    border-radius: 10px;
+    background: cadetblue;
+    border: none;
+  }

@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'mypagemain',
     'account',
     'selfqa',
-    'imagekit',
+    'imagekit'
 ]
 
 MIDDLEWARE = [

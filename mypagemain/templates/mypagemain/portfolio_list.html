@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel = "stylesheet" href="{% static 'css/mypagemain.css' %}">
+<link rel = "stylesheet" href="{% static 'css/timeline.css' %}">
+
+<div class="outer-container">
+  <div class="inner-container">
+      <div class="profile">
+          <div class="profilecontent">
+            <div class="profileimg"></div>
+          </div>
+          <div class="profiletext">
+            <a href="" class="nav1">프로필 수정</a>
+          </div>  
+          <!-- <a href="#" class="profileButton">프로필 수정</a>     -->
+        </div>
+      
+        <div class="nav">
+          <div class="navigation">
+            <a href="{%url 'mypagemain'%}" class="nav1">home</a>
+            <a href="{%url 'timeline'%}" class="nav1">타임라인</a>
+            <a href="" class="nav1">자문자답</a>
+            <a href="" class="nav1">Q&A</a>
+          </div>
+        </div>
+  </div>
+  
+  <div class="timeline-container">
+    <div class="container">
+        <div class="page-header">
+            <h1 id="timeline" class="inline">타임라인</h1>
+            <a class="btn btn-secondary btn-sm btn-more" href="{% url 'mypagemain' %}">메인으로</a>
+            <a class="btn btn-secondary btn-sm btn-more" href="{% url 'new_pf' %}">추가하기</a>
+        </div>
+        <ul class="timeline">
+            {%for blog in object_list%}
+            <li class="timeline-inverted">
+                <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">{{blog.title}}</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>{{blog.content}}</p>
+                  </div>
+                <a href = "{% url 'detail_pf' blog.id %}" class=button1> 자세히보기 </a> 
+                </div>
+              </li>
+            {%endfor%}
+        </ul>
+    </div>
+  </div>
+  
+</div>
+{% endblock %}
