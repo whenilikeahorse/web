@@ -241,11 +241,11 @@ label{
 }
 
 
-button{
+.button{
     all : unset;    /* 재정의 */
     cursor : pointer;
     background-color: white;
-    padding : 5px 0px;
+    padding : 10px 10px;
     width : 80px;
     text-align : center;
     border-radius : 5px;
@@ -253,8 +253,8 @@ button{
     border : 2px solid rgba(0,0,0,0.5);
     color : rgba(0,0,0,0.7);
     text-transform : uppercase;
-    font-weight : 800;
-    font-size: 12px;
+    font-family: 'yg-jalnan';
+    font-size: 16px;
 }
 
 button:active {
@@ -269,11 +269,19 @@ a:visited{
     color : black;
 }
 a:active{
-    color : black;
+    color : rgb(0, 0, 0);
 }
 a:hover{
-    color : black;
+    color : rgb(0, 0, 0);
 }
+
+nav a:active{
+    color : rgb(255, 156, 74);
+}
+nav a:hover{
+    color : rgb(255, 156, 74);
+}
+
 
 @font-face { 
     font-family: 'Eoe_Zno_M'; 

@@ -37,9 +37,12 @@
 
     <div class = "main2">
         {% if access_user == reader_user %} <!--로그인 한 사람과 질문 받는사람이 같다면-->
-           페이지 주인만 답변 가능
-            <div class = "button1">
+           페이지 주인만 답변/ 수정 가능
+            <div class = "button">
                 <a href="">답변하기</a>
+            </div>
+            <div class = "button">
+                <a href="">수정하기</a>
             </div>
         {% endif %}
         <div class="answer">
@@ -58,17 +61,17 @@
             <p> 현재 user와 작성자가 같아야만 '수정 / 삭제' 가능</p>
             
             {% if access_user == original_user %}    <!--로그인사람 사람과 작성자가 같다면-->
-            <div class = "button1">
+            <div class = "button">
                 <a href="">수정</a>
             </div>
-            <div class = "button1">
+            <div class = "button">
                 <a href="">삭제</a>
             </div>
             {% endif %}
     
             <p> 현재 user와 질문 받는사람이 같아야만 '삭제' 가능</p>
             {% if access_user == reader_user %} <!--로그인 한 사람과 질문 받는사람이 같다면-->
-            <div class = "button1">
+            <div class = "button">
                 <a href="">삭제</a>
             </div>
             {% endif %}

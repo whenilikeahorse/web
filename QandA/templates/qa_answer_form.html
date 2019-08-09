@@ -37,10 +37,13 @@
 
     <div class = "main2">
         <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" >submit</button>
-        </form>
+          {% csrf_token %}
+          <table>
+            {{ form }}
+          </table>
+          <button type="submit" class = "button" >submit</button>
+      </form>
     </div>
 </div>
+
 {% endblock %}

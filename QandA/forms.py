@@ -1,7 +1,7 @@
 # forms.py
 
 from django import forms 
-from .models import Userqa, Answerqa
+from .models import Userqa
 
 class UserqaForm(forms.ModelForm): 
     class Meta:
@@ -22,7 +22,7 @@ class UserqaForm(forms.ModelForm):
 
 class UserqaForm2(forms.ModelForm): 
     class Meta:
-        model = Answerqa
+        model = Userqa
         fields = ('a_title', 'answer')
         labels = {  # input의 label 정의
             'a_title' : '답변 제목' ,
@@ -30,6 +30,6 @@ class UserqaForm2(forms.ModelForm):
         }
         widgets = { # form의 특징과 속성 정의
             'a_title' : forms.TextInput ( attrs = {'class' : 'title'}),
-            'answer' : forms.TextInput ( attrs = {'class' : 'question', 'cols': 60, 'rows': 10}),
+            'answer' : forms.Textarea ( attrs = {'class' : 'question', 'cols': 60, 'rows': 10}),
         }
 

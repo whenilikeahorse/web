@@ -26,16 +26,15 @@
     </div>
 
     <div class = "main1">
-        <div class = "button">
-            <a href = "{% url 'qa_new' %}">질문하기</a>
-        </div>
-        <p>'{{user.username}}' 님에게 작성된 질문 개수 : {{n}}</p> 
-            
-        {% for qa in userqas %}
-        <div class="user_question">
-            <a href="{% url 'qa_detail' qa.id %}"><p>{{qa.title}}</p></a>
-        </div>
-        {% endfor %}
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+              {{ form }}
+            </table>
+            <p>받는사람을 정확히 입력해야 질문이 등록됩니다!</p>
+            <button type="submit" class = "button" >submit</button>
+        </form>
+
     </div>
 </div>
 {% endblock %}
