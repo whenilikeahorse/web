@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from QandA.models import Userqa
+from django.db.models import Q
 
 def main(request):
     users = User.objects.all().exclude(username = request.user)[0:6]
