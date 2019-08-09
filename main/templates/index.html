@@ -3,6 +3,13 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
+<!--검색기능(안꾸밈..못꾸밈...)-->
+<form class="form-inline my-2 my-lg-0" method = "POST" action="{% url 'search' %}">
+  {% csrf_token %}
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search_word">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
     <!--Carousel--> 
     <div class="bd-example">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
