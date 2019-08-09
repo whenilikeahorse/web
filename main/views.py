@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from QandA.models import Userqa
+from django.db.models import Q
 
 def main(request):
     users = User.objects.all().exclude(username = request.user)[0:6]
@@ -23,3 +24,12 @@ def other_page(request, user_id):
 
 def search_page(request):
     return render(request, 'search_page.html')
+
+def search(request):
+    if request.method == 'POST':
+        search_word = request.POST['search_word']
+        users = User.objects.filter(
+            Q(username__icontains=search_word) # Q 객체를 사용해서 검색
+        ).distinct() # 중복 제거
+        return render(request, 'search.html', {'users':users, 'search_word':search_word})
+    return render(request, 'index.html')

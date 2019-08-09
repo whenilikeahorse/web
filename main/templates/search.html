@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% if users %} 
+{% for user in users %} 
+<a href="{{ user.get_absolute_url }}">{{ user.username }} <br> </a>
+{% endfor %} 
+{% elif search_word %} 
+Search Word {{ search_word }} Not Found! 
+{% endif %}
+{% endblock %}
