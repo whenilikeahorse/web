@@ -1,5 +1,46 @@
-<form method='POST'>
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="추가하기"> 
-</form>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel = "stylesheet" href="{% static 'css/mypagemain.css' %}">
+<link rel = "stylesheet" href="{% static 'css/timeline.css' %}">
+
+<div class="outer-container">
+  <div class="inner-container">
+      <div class="profile">
+          <div class="profilecontent">
+            <div class="profileimg"></div>
+          </div>
+          <div class="profiletext">
+            <a href="" class="nav1">프로필 수정</a>
+          </div>  
+          <!-- <a href="#" class="profileButton">프로필 수정</a>     -->
+        </div>
+      
+        <div class="nav">
+          <div class="navigation">
+            <a href= "{% url 'mypagemain' %}" class="nav1">My Page</a>
+            <a href="{% url 'timeline' %}" class="nav1">Portfolio</a>
+            <a href= "{% url 'qa_list' %}" class="nav1">Q&A</a>
+            <a href="{%url 'selfqa' %}" class="nav1">Self Q&A</a>
+          </div>
+        </div>
+  </div>
+  
+  <div class="timeline-container">
+    <div class="container">
+        <div class="page-header">
+            <h1 id="timeline" class="inline">{{ object.title }}</h1>
+            <a class="btn btn-secondary btn-sm btn-more" href="{% url 'timeline' %}">뒤로가기</a>
+        </div>
+        <div>
+            <form method='POST'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="추가하기"> 
+            </form>               
+        </div>
+    </div>
+  </div>
+  
+</div>
+{% endblock %}

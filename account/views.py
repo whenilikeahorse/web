@@ -40,7 +40,7 @@ from .forms import UserForm, ProfileForm
         
 #         if user is not None:
 #             auth.login(request, user)
-#             return redirect('user_page')
+#             return redirect('mypagemain')
 #         else:
 #             return render(request, 'login.html', {'error': '아이디 또는 비밀번호가 올바르지 않습니다'})
 #     else:
@@ -51,19 +51,6 @@ from .forms import UserForm, ProfileForm
 #         auth.logout(request)
 #         return redirect('index')
 #     return render(request, 'index.html')
-
-# 유저 페이지 관리
-
-def user_page(request):
-    logined = request.user   # login한 User
-    logined_user = logined.username
-    user_qa = Userqa.objects.filter( reader = logined_user )[:3]
-    user_qa_view = Userqa.objects.filter( reader = logined_user )
-    n = user_qa_view.count()
-    return render(request, 'user_page.html', {
-        'userqas' : user_qa,
-        'n' : n,
-    })
 
 #############################################
 #######수지test#################
@@ -106,7 +93,7 @@ def login(request):
         user = auth.authenticate(request, username=username, password=password )
         if user is not None:
             auth.login(request, user)
-            return redirect('user_page')
+            return redirect('mypagemain')
         else:
             return render(request, 'login.html', {'error': 'username or password is incorrect.'})
     else:
@@ -154,7 +141,7 @@ def profile(request):
             print(save_data)
             save_data.save()
             print("valid")
-            return redirect('user_page')
+            return redirect('mypagemain')
         else:
             print("error")
             print(user_form.errors, profile_form.errors)

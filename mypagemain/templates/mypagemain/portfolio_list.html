@@ -18,10 +18,10 @@
       
         <div class="nav">
           <div class="navigation">
-            <a href="{%url 'mypagemain'%}" class="nav1">home</a>
-            <a href="{%url 'timeline'%}" class="nav1">타임라인</a>
-            <a href="" class="nav1">자문자답</a>
-            <a href="" class="nav1">Q&A</a>
+            <a href= "{% url 'mypagemain' %}" class="nav1">My Page</a>
+            <a href="{% url 'timeline' %}" class="nav1">Portfolio</a>
+            <a href= "{% url 'qa_list' %}" class="nav1">Q&A</a>
+            <a href="{%url 'selfqa' %}" class="nav1">Self Q&A</a>
           </div>
         </div>
   </div>
@@ -30,13 +30,21 @@
     <div class="container">
         <div class="page-header">
             <h1 id="timeline" class="inline">타임라인</h1>
-            <a class="btn btn-secondary btn-sm btn-more" href="{% url 'mypagemain' %}">메인으로</a>
+            <a class="btn btn-secondary btn-sm btn-more ml-2" href="{% url 'mypagemain' %}">메인으로</a>
             <a class="btn btn-secondary btn-sm btn-more" href="{% url 'new_pf' %}">추가하기</a>
         </div>
         <ul class="timeline">
             {%for blog in object_list%}
+            {% if blog.content_type == 0 %}
             <li class="timeline-inverted">
-                <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                <div class="timeline-badge success"></div>
+            {% elif blog.content_type == 1 %}
+            <li class="timeline">
+                <div class="timeline-badge warning"></div>
+            {% else %}
+            <li class="timeline-inverted">
+                <div class="timeline-badge danger"></div>
+            {%endif%}
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4 class="timeline-title">{{blog.title}}</h4>

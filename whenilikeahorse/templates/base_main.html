@@ -49,7 +49,7 @@
 
                 {% if user.is_authenticated %}
                 <td class = "nav_item">
-                    <a href="{%url 'user_page'%}">My Page</a>
+                    <a href="{%url 'mypagemain'%}">My Page</a>
                 </td>
                 <td class = "nav_item">
                     <form id="logout" method="POST" action="{% url 'logout' %}">
