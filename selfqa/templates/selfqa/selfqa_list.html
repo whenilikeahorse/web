@@ -31,6 +31,10 @@
         </div> 
 
         <div class = "QAlist">
+
+            <p>현재 user : {{access_user}}</p>
+            <p>작성자 : {{original_user}}</p>
+            
           {%for blog in object_list%}
             <div class="question">
                 <div class="index"> Q </div> 
@@ -38,9 +42,11 @@
             <div class="answer">
                 <div class="index"> A </div> 
                 {{blog.answer}}</div> <br> 
+            {% if access_user == original_user %}               
+              <a href = "{% url 'change' blog.id %}" class=button1> 수정 </a> 
+              <a href = "{% url 'del' blog.id %}" class=button1 > 삭제 </a><br>
+            {% endif %}  
 
-            <a href = "{% url 'change' blog.id %}" class=button1> 수정 </a> 
-            <a href = "{% url 'del' blog.id %}" class=button1 > 삭제 </a><br>
           {%endfor%}
 
           <a href="{% url 'new' %}" class="addqa">+ Add a Question</a>
